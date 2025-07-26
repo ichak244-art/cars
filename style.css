@@ -242,7 +242,6 @@
     }
         @media (max-width: 768px) {
   .hero {
-    background-position: 65% center; /* Сместите фокус на важную часть изображения */
     min-height: 60vh !important;
     min-width: 60vh !important;
   }
