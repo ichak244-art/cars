@@ -120,7 +120,13 @@
 </div>
 
 <!-- Hero Section -->
-<section class="hero min-h-screen flex items-center justify-center relative bg-cover bg-center parallax" style="background-image: url('64807a998_image.png');">
+<section class="hero min-h-screen flex items-center justify-center relative">
+  <!-- Retina поддержка для iPhone -->
+  <picture>
+    <source srcset="64807a998_image@2x.png" media="(min-device-pixel-ratio: 2)">
+    <img src="64807a998_image.png" alt="Hintergrundbild" class="absolute inset-0 w-full h-full object-cover parallax-img">
+  </picture>
+
   <div class="water-bg"></div>
   <div class="max-w-7xl mx-auto relative z-10 px-4">
     <div class="text-center py-20">
@@ -148,6 +154,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- Stats Section -->
 <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-main">
