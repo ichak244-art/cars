@@ -240,4 +240,11 @@
       border-bottom: 1px solid #f0f0f0;
       padding: 12px 0;
     }
+        @media (max-width: 768px) {
+  .hero {
+    background-position: 65% center; /* Сместите фокус на важную часть изображения */
+    min-height: 60vh !important;
+    min-width: 60vh !important;
+  }
+}
 
