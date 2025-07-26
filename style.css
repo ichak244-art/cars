@@ -402,3 +402,9 @@ body {
   width: 135px;
   height: 1000px;
 }
+    @media (max-width: 768px) {
+  .hero {
+    background-position: 65% center; /* Сместите фокус на важную часть изображения */
+    background-size: cover;
+  }
+}
