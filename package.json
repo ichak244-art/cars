@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@mollie/api-client": "^4.3.3",
-    "cors": "^2.8.5",
-    "express": "^5.1.0"
-  }
-}
