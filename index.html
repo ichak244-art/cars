@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hilfehub</title>
+    <title>Hilfehub Über uns</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -162,347 +162,179 @@
         </div>
     </div>
 
+
+<main>
     <!-- Hero Section -->
-    <section class="hero min-h-screen flex items-center justify-center relative">
-        <!-- Retina поддержка для iPhone -->
-        <picture>
-            <source srcset="64807a998_image@2x.png" media="(min-device-pixel-ratio: 2)">
-            <img src="64807a998_image.png" alt="Hintergrundbild"
-                class="absolute inset-0 w-full h-full object-cover parallax-img">
-        </picture>
-
-        <div class="water-bg"></div>
-        <div class="max-w-7xl mx-auto relative z-10 px-4">
-            <div class="text-center py-20">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white animate-fadeIn" data-i18n="heroTitle"
-                    data-i18n-html>
-                    Sauberes Wasser für alle
-                </h1>
-                <p class="text-xl md:text-2xl text-white mb-4 font-medium animate-fadeIn" style="animation-delay: 0.2s;"
-                    data-i18n="heroSubtitle">
-                    Jeder Mensch verdient Zugang zu sauberem Trinkwasser
-                </p>
-                <p class="text-lg text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed animate-fadeIn"
-                    style="animation-delay: 0.4s;" data-i18n="heroText">
-                    771 Millionen Menschen haben keinen Zugang zu sauberem Wasser. Gemeinsam können wir das ändern.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn"
-                    style="animation-delay: 0.6s;">
-                    <button
-                        class=" ripple inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-11 rounded-md bgFirstButtom hover:bg-cyan-600  px-8 py-4 text-lg shadow-2xl"
-                        data-i18n="">
-                        Jetzt helfen
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-arrow-right w-5 h-5 ml-2">
-                            <path d="M5 12h14"></path>
-                            <path d="m12 5 7 7-7 7"></path>
-                        </svg>
-                    </button>
-                    <button
-                        class="btn-green ripple inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-11 rounded-md text-white hover:bg-white/10 px-8 py-4 text-lg"
-                        data-i18n="learnMore">
-                        Mehr erfahren
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Stats Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-main">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-black" data-i18n="crisisTitle">Die Wasserkrise</h2>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <div class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-users w-12 h-12 mx-auto mb-4 text-red-500">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    <div class="text-4xl md:text-5xl font-bold mb-4 text-red-500">771 Millionen</div>
-                    <p class="text-lg text-gray-700" data-i18n="stat1">Menschen ohne sauberes Wasser</p>
-                </div>
-
-                <div class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-globe w-12 h-12 mx-auto mb-4 text-orange-500">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                        <path d="M2 12h20"></path>
-                    </svg>
-                    <div class="text-4xl md:text-5xl font-bold mb-4 text-orange-500">1 von 10</div>
-                    <p class="text-lg text-gray-700" data-i18n="stat2">Menschen weltweit betroffen</p>
-                </div>
-
-                <div class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-clock w-12 h-12 mx-auto mb-4 text-yellow-500">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                    <div class="text-4xl md:text-5xl font-bold mb-4 text-yellow-500">2 Stunden täglich</div>
-                    <p class="text-lg text-gray-700" data-i18n="stat3">verbringen Frauen mit Wasserholen</p>
-                </div>
-
-                <div class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-baby w-12 h-12 mx-auto mb-4 text-red-600">
-                        <path d="M9 12h.01"></path>
-                        <path d="M15 12h.01"></path>
-                        <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"></path>
-                        <path
-                            d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1">
-                        </path>
-                    </svg>
-                    <div class="text-4xl md:text-5xl font-bold mb-4 text-red-600">1.000 Kinder</div>
-                    <p class="text-lg text-gray-700" data-i18n="stat4">sterben täglich an wasserbedingten Krankheiten
-                    </p>
-                </div>
-
-                <div class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-shield w-12 h-12 mx-auto mb-4 text-purple-500">
-                        <path
-                            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
-                        </path>
-                    </svg>
-                    <div class="text-4xl md:text-5xl font-bold mb-4 text-purple-500">50% der Krankenhäuser</div>
-                    <p class="text-lg text-gray-700" data-i18n="stat5">haben kein sauberes Wasser</p>
-                </div>
-
-                <div class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-triangle-alert w-12 h-12 mx-auto mb-4 text-red-700">
-                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path>
-                        <path d="M12 9v4"></path>
-                        <path d="M12 17h.01"></path>
-                    </svg>
-                    <div class="text-4xl md:text-5xl font-bold mb-4 text-red-700">297.000 Kinder</div>
-                    <p class="text-lg text-gray-700" data-i18n="stat6">unter 5 Jahren sterben jährlich durch Durchfall
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-main">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-black" data-i18n="impactTitle">Wie Wassermangel
-                    Leben zerstört</h2>
-            </div>
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
-                <div class="impact-img">
-                    <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-                        <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/5776dbaf2_image.png"
-                            alt="Sick child from contaminated water" class="w-full h-96 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact1">Gesundheit in Gefahr</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed" data-i18n="impact1Text">Verunreinigtes Wasser
-                        verursacht Krankheiten wie Cholera und Durchfall. Täglich sterben über 1.000 Kinder an
-                        wasserbedingten Krankheiten.</p>
-                </div>
-            </div>
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
-                <div>
-                    <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact2">Bildung unmöglich</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed" data-i18n="impact2Text">Kinder, besonders Mädchen,
-                        können nicht zur Schule gehen, weil sie stundenlang Wasser holen müssen.</p>
-                </div>
-                <div class="impact-img">
-                    <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&auto=format&fit=crop"
-                            alt="Girl carrying water instead of going to school" class="w-full h-96 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
-                <div class="impact-img">
-                    <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=2056&auto=format&fit=crop"
-                            alt="Poor children in community without clean water" class="w-full h-96 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact3">Armut verstärkt</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed" data-i18n="impact3Text">Ohne sauberes Wasser können
-                        Gemeinden nicht gedeihen. Landwirtschaft und Wirtschaft leiden unter der Wasserkrise.</p>
-                </div>
-            </div>
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
-                <div>
-                    <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact4">Frauen am stärksten betroffen
-                    </h3>
-                    <p class="text-lg text-gray-700 leading-relaxed" data-i18n="impact4Text">Frauen und Mädchen tragen
-                        die Hauptlast der Wasserkrise. Sie verbringen täglich Stunden damit, Wasser zu sammeln.</p>
-                </div>
-                <div class="impact-img">
-                    <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-                        <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/eb5f29dbe_image.png"
-                            alt="Women carrying water containers" class="w-full h-96 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
-                <div class="impact-img">
-                    <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop"
-                            alt="Poor children needing clean water" class="w-full h-96 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact5">Kinder leiden am meisten</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed" data-i18n="impact5Text">Millionen von Kindern haben
-                        nie sauberes Wasser getrunken. Ihre Zukunft hängt von unserer Hilfe ab.</p>
-                </div>
-            </div>
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact6">Hoffnung für die Zukunft</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed" data-i18n="impact6Text">Mit jedem Brunnen, den wir
-                        bauen, schenken wir Kindern eine bessere Zukunft und die Chance auf ein gesundes Leben.</p>
-                </div>
-                <div class="impact-img">
-                    <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-                        <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/7cfffcf8e_image.png"
-                            alt="Happy children with access to clean water" class="w-full h-96 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Donation Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r relative overflow-hidden">
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 animate-fadeIn" data-i18n="donationTitle">
-                Ihre Spende bewirkt Wunder
-            </h2>
-            <p class="text-xl leading-relaxed animate-fadeIn" style="animation-delay: 0.2s;" data-i18n="donationText">
-                Mit Ihrer Hilfe bauen wir Brunnen, installieren Wassersysteme und schaffen nachhaltigen Zugang zu
-                sauberem Wasser.
+    <section class="hero relative py-32 px-4 sm:px-6 lg:px-8 bg-cyan-500 text-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-i18n="aboutTitle">Über uns</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto" data-i18n="aboutSubtitle">
+                Wir glauben, dass kein Kind seinen Weg zur Genesung oder durch eine Lebenskrise allein gehen sollte.
             </p>
         </div>
     </section>
 
-    <!-- Form Section -->
+    <!-- Mission Section -->
     <section class="py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-            <div class="donation-form">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center" data-i18n="formTitle">Jetzt spenden</h2>
-
-                <p class="block text-gray-700 mb-3 text-center">
-                    Ihre Unterstützung hilft uns, <br />
-                    Herzenswünsche schwer kranker Kinder <br />
-                    wahr werden zu lassen.
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="missionTitle">Unsere Mission</h2>
+                <p class="text-lg text-gray-700 mb-6" data-i18n="missionText1">
+                    Bei Hilfehub – Zentrum für Hilfe in Krisensituationen – stehen wir Kindern in Österreich bei, 
+                    die schwere Krankheiten überstanden haben oder sich in einer schwierigen Lebensphase befinden.
                 </p>
+                <p class="text-lg text-gray-700" data-i18n="missionText2">
+                    Unsere Aufgabe ist es, Unterstützung, Fürsorge und Hoffnung zu geben – auf Grundlage christlicher Werte.
+                </p>
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-xl hover-scale">
+                <img src="nursery.jpg" alt="Kinderhilfe" class="w-full h-96 object-cover">
+            </div>
+        </div>
+    </section>
 
-                <div class="mb-8">
-                    <label class="block text-gray-700 font-medium mb-3 text-center"
-                        data-i18n="donationAmount">Spendenbetrag</label>
-
-                    <!-- Переключатель периодичности -->
-                    <div class="frequency-selector mb-6">
-                        <div class="frequency-btn oneTimeButton selected" data-frequency="once" data-i18n="oneTime">
-                            Einmalig</div>
-                        <div class="frequency-btn monthlyButton" data-frequency="monthly" data-i18n="monthly">Monatlich
-                        </div>
+    <!-- History Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center" data-i18n="historyTitle">Wer wir sind</h2>
+            <div class="space-y-12">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <img src="NINTCHDBPICT000501403502.webp" alt="Unterstützung für Kinder" class="w-full h-48 object-cover rounded-xl">
                     </div>
-
-                    <!-- Суммы -->
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-                        <div class="donation-option" data-amount="10">€10</div>
-                        <div class="donation-option" data-amount="25">€25</div>
-                        <div class="donation-option" data-amount="50">€50</div>
-                        <div class="donation-option" data-amount="100">€100</div>
-                        <div class="donation-option" data-amount="125">€125</div>
-                        <div class="donation-option" data-amount="other">
-                            <input type="number" placeholder="Anderer Betrag" data-i18n="otherAmount"
-                                class="w-full andererBetrag text-center bg-transparent border-none focus:outline-none"
-                                min="1" />
-                        </div>
+                    <div class="md:col-span-3">
+                        <h3 class="text-2xl font-bold mb-3" data-i18n="history1Title">Gezielte Hilfe</h3>
+                        <p class="text-gray-700" data-i18n="history1Text">
+                            Wir arbeiten mit Sozial- und anderen Diensten zusammen, um Kindern in Not umfassend zu helfen – 
+                            von wichtigen Alltagsgegenständen und medizinischen Mitteln bis zu moralischer und seelsorgerischer Unterstützung.
+                        </p>
                     </div>
-
-                    <!-- Ошибки -->
-                    <div id="card-errors" class="text-red-500 mb-4 text-center"></div>
-
-                    <!-- Кнопка -->
-                    <div class="text-center">
-                        <button id="donate-btn"
-                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-14 rounded-md bg-cyan-500 hover:bg-cyan-600 text-white px-10 py-4 text-lg shadow-2xl transition-all opacity-70 cursor-not-allowed"
-                            disabled data-i18n="continue">
-                            Spenden Sie jetzt
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5">
-                                <path d="M5 12h14"></path>
-                                <path d="m12 5 7 7-7 7"></path>
-                            </svg>
-                        </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+                    <div class="md:col-span-3 order-2 md:order-1">
+                        <h3 class="text-2xl font-bold mb-3" data-i18n="history2Title">Unsere Werte</h3>
+                        <p class="text-gray-700" data-i18n="history2Text">
+                            Wir glauben, dass jedes Kind Fürsorge, Schutz und die Chance auf eine bessere Zukunft verdient.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 order-1 md:order-2">
+                        <img src="IEEEP-2.png" alt="Hoffnung für Kinder" class="w-full h-48 object-cover rounded-xl">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-
-    <section class="py-20 px-4 sm:px-6 lg:px-8 light-green-bg">
-        <div class="max-w-4xl mx-auto">
-            <div class="donation-form">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center" data-i18n="sendDataTitle">Mitglied werden
-                </h2>
-                <p class="block text-gray-700 mb-3 text-center" data-i18n="willYouReceive">Werden Sie Mitglied oder
-                    Erehnamlicher/in</p>
-
-                <div class="mb-8">
-                    <label class="block text-gray-700 font-medium mb-3 text-center" data-i18n="personalData">Persönliche
-                        Daten</label>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <input type="text" placeholder="Vorname" data-i18n="firstName"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg">
-                        <input type="text" placeholder="Nachname" data-i18n="lastName"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg">
-                    </div>
-                    <input type="email" placeholder="E-Mail" data-i18n="email"
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4">
-                    <input type="date" placeholder="Geburtsdatum"
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4">
+    <!-- Team Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" data-i18n="teamTitle">Unser Team</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover-scale">
+                    <img src="team1.jpg" alt="Anna Müller" class="w-32 h-32 mx-auto mb-4 rounded-xl object-cover">
+                    <h3 class="text-xl font-bold mb-1">Anna Müller</h3>
+                    <p class="text-cyan-500 mb-4" data-i18n="teamRole1">Gründerin & Leiterin</p>
+                    <p class="text-gray-600" data-i18n="teamBio1">
+                        Langjährige Erfahrung in der Arbeit mit Kindern in Krisensituationen.
+                    </p>
                 </div>
-
-                <div class="text-center">
-                    <button id="send-btn"
-                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-14 rounded-md bg-cyan-500 hover:bg-cyan-600 text-white px-10 py-4 text-lg shadow-2xl"
-                        disabled data-i18n="sendButton">
-                        Jetzt beitreten
-                    </button>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover-scale">
+                    <img src="team2.jpg" alt="Markus Steiner" class="w-32 h-32 mx-auto mb-4 rounded-xl object-cover">
+                    <h3 class="text-xl font-bold mb-1">Markus Steiner</h3>
+                    <p class="text-cyan-500 mb-4" data-i18n="teamRole2">Projektleiter</p>
+                    <p class="text-gray-600" data-i18n="teamBio2">
+                        Koordiniert Hilfsprojekte und die Zusammenarbeit mit Sozialdiensten.
+                    </p>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover-scale">
+                    <img src="team3.jpg" alt="Laura Berger" class="w-32 h-32 mx-auto mb-4 rounded-xl object-cover">
+                    <h3 class="text-xl font-bold mb-1">Laura Berger</h3>
+                    <p class="text-cyan-500 mb-4" data-i18n="teamRole3">Finanzverwaltung</p>
+                    <p class="text-gray-600" data-i18n="teamBio3">
+                        Verantwortlich für Budgetplanung und Transparenz.
+                    </p>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover-scale">
+                    <img src="team4.jpg" alt="Peter Hoffmann" class="w-32 h-32 mx-auto mb-4 rounded-xl object-cover">
+                    <h3 class="text-xl font-bold mb-1">Peter Hoffmann</h3>
+                    <p class="text-cyan-500 mb-4" data-i18n="teamRole4">Öffentlichkeitsarbeit</p>
+                    <p class="text-gray-600" data-i18n="teamBio4">
+                        Zuständig für Kommunikation und Spenderkontakte.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Stats Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-cyan-500 text-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" data-i18n="impactTitle">Unsere Wirkung</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center stat-card">
+                    <p class="text-5xl md:text-6xl font-bold mb-2">300+</p>
+                    <p class="text-lg" data-i18n="impact1">Kinder unterstützt</p>
+                </div>
+                <div class="text-center stat-card">
+                    <p class="text-5xl md:text-6xl font-bold mb-2">50+</p>
+                    <p class="text-lg" data-i18n="impact2">Kooperationspartner</p>
+                </div>
+                <div class="text-center stat-card">
+                    <p class="text-5xl md:text-6xl font-bold mb-2">10</p>
+                    <p class="text-lg" data-i18n="impact3">Jahre Erfahrung</p>
+                </div>
+                <div class="text-center stat-card">
+                    <p class="text-5xl md:text-6xl font-bold mb-2">100%</p>
+                    <p class="text-lg" data-i18n="impact4">Spenden fließen in Hilfsprojekte</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" data-i18n="partnersTitle">Unsere Partner</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-gray-100 p-8 rounded-xl flex items-center justify-center hover-scale">
+                    <img src="partner1.png" alt="Partner 1" class="w-32 h-16 object-contain">
+                </div>
+                <div class="bg-gray-100 p-8 rounded-xl flex items-center justify-center hover-scale">
+                    <img src="partner2.png" alt="Partner 2" class="w-32 h-16 object-contain">
+                </div>
+                <div class="bg-gray-100 p-8 rounded-xl flex items-center justify-center hover-scale">
+                    <img src="partner3.png" alt="Partner 3" class="w-32 h-16 object-contain">
+                </div>
+                <div class="bg-gray-100 p-8 rounded-xl flex items-center justify-center hover-scale">
+                    <img src="partner4.png" alt="Partner 4" class="w-32 h-16 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8  ">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="ctaTitle">Werde Teil unserer Mission</h2>
+            <p class="text-xl text-gray-700 mb-8" data-i18n="ctaText">
+                Gemeinsam können wir Kindern in Krisensituationen Hoffnung schenken. Unterstütze unsere Arbeit mit deiner Spende oder ehrenamtlichen Hilfe.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#donate" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-14 rounded-md bg-yellow-500 hover:bg-cyan-600 text-black px-8 py-4 text-lg shadow-2xl ripple" data-i18n="ctaButton1">
+                    Jetzt spenden
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
 
 
 
@@ -513,7 +345,6 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <!-- Обновленный блок с иконкой и текстом вместо логотипа -->
                 <div class="flex flex-col items-center mb-4 md:mb-0">
-                    <!-- Иконка (можно заменить на свою) -->
                     <div class="mb-2">
                         <img src="processed_image (1).png" alt="Icon" class="h-20 w-20">
                     </div>
@@ -823,197 +654,125 @@
         // Объект с переводами
         const translations = {
             de: {
-                // Навигация
-                about: "Über uns",
-                member: "Mitglied werden",
-                partners: "Partner",
-                vacation: "Urlaub beantragen",
-                sendDataTitle: "Mitglied werden",
-                followUs: "Folge uns",
-                willYouReceive: "Werden Sie Mitglied oder Erehnamlicher/in",
-                contactTitle: "Kontakt",
-                makeAwish: "Währinger Straße 169-171 3/4 1180 Wien",
+    // Навигация
+    about: "Über uns",
+    member: "Mitglied werden",
+    partners: "Partner",
+    vacation: "Urlaub beantragen",
+    sendDataTitle: "Mitglied werden",
+    followUs: "Folge uns",
+    willYouReceive: "Werden Sie Mitglied oder Ehrenamtlicher/in",
+    contactTitle: "Kontakt",
+    makeAwish: "Währinger Straße 169-171 3/4 1180 Wien",
 
-                contactTitle: "Kontakt",
-                officeHours: "Bürozeiten",
-                officeHoursText: "Dienstag – Freitag 10:00 Uhr – 14:00 Uhr",
-                phoneTitle: "Telefon",
-                bankTransfer: "Banküberweisung",
-                bankDetails: "Erste Bank: IBAN: AT52 2011 1404 1027 7701 BIC: GIBAATWWXXX",
-                donateNow: "JETZT SPENDEN >",
-                becomeMember: "ZUM NEWSLSETTER ANMELDEN >",
+    officeHours: "Bürozeiten",
+    officeHoursText: "Dienstag – Freitag 10:00 Uhr – 14:00 Uhr",
+    phoneTitle: "Telefon",
+    bankTransfer: "Banküberweisung",
+    bankDetails: "Erste Bank: IBAN: AT52 2011 1404 1027 7701 BIC: GIBAATWWXXX",
+    donateNow: "JETZT SPENDEN >",
+    becomeMember: "ZUM NEWSLETTER ANMELDEN >",
 
+    // About
+    aboutTitle: "Über uns",
+    aboutSubtitle: "Wir glauben, dass kein Kind allein durch Krankheit oder Krise gehen sollte",
+    missionTitle: "Unsere Mission",
+    missionText1: "Bei Hilfehub – Zentrum für Hilfe in Krisensituationen – begleiten wir Kinder in Österreich, die schwere Krankheiten überstanden haben oder sich in einer Krise befinden.",
+    missionText2: "Wir bieten Unterstützung, Fürsorge und Hoffnung auf Grundlage christlicher Werte.",
+    historyTitle: "Wer wir sind",
+    history1Title: "Hilfe für Kinder",
+    history1Text: "Wir arbeiten mit Sozial- und anderen Diensten zusammen, um gezielte Hilfe zu leisten – von wichtigen Alltagsgegenständen und medizinischen Hilfsmitteln bis hin zu moralischer und seelsorgerischer Unterstützung.",
+    history2Title: "Unsere Werte",
+    history2Text: "Wir glauben, dass jedes Kind Fürsorge, Schutz und die Chance auf eine bessere Zukunft verdient.",
 
+    teamTitle: "Unser Team",
+    teamRole1: "Gründer & Geschäftsführer",
+    teamBio1: "Engagiert für die Unterstützung von Kindern in Krisensituationen mit über 15 Jahren Erfahrung in der sozialen Arbeit.",
+    teamRole2: "Projektleiterin",
+    teamBio2: "Koordiniert Hilfsprojekte und arbeitet direkt mit Familien und Sozialdiensten.",
+    teamRole3: "Finanzvorstand",
+    teamBio3: "Verantwortlich für transparente Mittelverwendung und Budgetplanung.",
+    teamRole4: "Kommunikationsleiterin",
+    teamBio4: "Verantwortlich für Öffentlichkeitsarbeit und Spenderkommunikation.",
 
-                navAbout: "Über uns",
-                navMember: "Mitglied werden",
-                navPartners: "Partner",
-                navPartnerHotels: "Partnerhotels",
-                navPartnerOrgs: "Partnerorganisationen",
-                navVacation: "Urlaub beantragen",
-                navMore: "Mehr",
-                navAktuelles: "Aktuelles",
-                navPresse: "Presse",
-                navGutschein: "2for1 Gutschein",
-                navTermine: "Termine",
+    impactTitle: "Unsere Wirkung",
+    impact1: "Kinder unterstützt",
+    impact2: "Familien begleitet",
+    impact3: "Projekte umgesetzt",
+    impact4: "Freiwillige im Einsatz",
 
-                // Герой
-                heroTitle: "Sauberes Wasser für alle",
-                heroSubtitle: "Jeder Mensch verdient Zugang zu sauberem Trinkwasser",
-                heroText: "771 Millionen Menschen haben keinen Zugang zu sauberem Wasser. Gemeinsam können wir das ändern.",
-                helpNow: "Jetzt helfen",
-                learnMore: "Mehr erfahren",
+    partnersTitle: "Unsere Partner",
+    ctaTitle: "Werden Sie Teil unserer Mission",
+    ctaText: "Gemeinsam können wir Kindern Hoffnung geben. Unterstützen Sie unsere Arbeit mit Ihrer Spende oder als Ehrenamtlicher.",
+    ctaButton1: "Jetzt spenden",
+    ctaButton2: "Ehrenamtlich helfen",
 
+    // Footer
+    privacy: "Datenschutz",
+    imprint: "Impressum",
+    rights: "© 2025 Hilfehub."
+},
 
-                // Статистика
-                crisisTitle: "Die Wasserkrise",
-                stat1: "Menschen ohne sauberes Wasser",
-                stat2: "Menschen weltweit betroffen",
-                stat3: "verbringen Frauen mit Wasserholen",
-                stat4: "sterben täglich an wasserbedingten Krankheiten",
-                stat5: "haben kein sauberes Wasser",
-                stat6: "unter 5 Jahren sterben jährlich durch Durchfall",
+en: {
+    // Navigation
+    about: "About us",
+    member: "Become a member",
+    partners: "Partners",
+    vacation: "Request vacation",
+    sendDataTitle: "Become a member",
+    followUs: "Follow us",
+    willYouReceive: "Become a member or volunteer",
+    contactTitle: "Contact",
+    makeAwish: "Währinger Straße 169-171 3/4 1180 Vienna",
 
-                // Форма
-                formTitle: "Jetzt spenden",
-                personalData: "Persönliche Daten",
-                firstName: "Vorname",
-                lastName: "Nachname",
-                email: "E-Mail",
-                phone: "Telefonnummer",
-                donationAmount: "Spendenbetrag",
-                oneTime: "Einmalig",
-                monthly: "Monatlich",
-                otherAmount: "Anderer Betrag",
-                continue: "Spenden Sie jetzt",
-                sendButton: "Jetzt beitreten",
+    officeHours: "Office Hours",
+    officeHoursText: "Tuesday – Friday 10:00 am – 2:00 pm",
+    phoneTitle: "Phone",
+    bankTransfer: "Bank Transfer",
+    bankDetails: "Erste Bank: IBAN: AT52 2011 1404 1027 7701 BIC: GIBAATWWXXX",
+    donateNow: "DONATE NOW >",
+    becomeMember: "SUBSCRIBE TO THE NEWSLETTER >",
 
+    // About
+    aboutTitle: "About Us",
+    aboutSubtitle: "We believe that no child should go through illness or crisis alone",
+    missionTitle: "Our Mission",
+    missionText1: "At Hilfehub – Center for Help in Crisis Situations – we support children in Austria who have overcome serious illnesses or are facing a crisis.",
+    missionText2: "We provide care, support, and hope based on Christian values.",
+    historyTitle: "Who We Are",
+    history1Title: "Support for Children",
+    history1Text: "We work with social and other services to provide targeted help – from essential items and medical supplies to moral and pastoral support.",
+    history2Title: "Our Values",
+    history2Text: "We believe that every child deserves care, protection, and the chance for a better future.",
 
-                // Воздействие
-                impactTitle: "Wie Wassermangel Leben zerstört",
-                impact1: "Gesundheit in Gefahr",
-                impact1Text: "Verunreinigtes Wasser verursacht Krankheiten wie Cholera und Durchfall. Täglich sterben über 1.000 Kinder an wasserbedingten Krankheiten.",
-                impact2: "Bildung unmöglich",
-                impact2Text: "Kinder, besonders Mädchen, können nicht zur Schule gehen, weil sie stundenlang Wasser holen müssen.",
-                impact3: "Armut verstärkt",
-                impact3Text: "Ohne sauberes Wasser können Gemeinden nicht gedeihen. Landwirtschaft und Wirtschaft leiden unter der Wasserkrise.",
-                impact4: "Frauen am stärksten betroffen",
-                impact4Text: "Frauen und Mädchen tragen die Hauptlast der Wasserkrise. Sie verbringen täglich Stunden damit, Wasser zu sammeln.",
-                impact5: "Kinder leiden am meisten",
-                impact5Text: "Millionen von Kindern haben nie sauberes Wasser getrunken. Ihre Zukunft hängt von unserer Hilfe ab.",
-                impact6: "Hoffnung für die Zukunft",
-                impact6Text: "Mit jedem Brunnen, den wir bauen, schenken wir Kindern eine bessere Zukunft und die Chance auf ein gesundes Leben.",
+    teamTitle: "Our Team",
+    teamRole1: "Founder & CEO",
+    teamBio1: "Committed to supporting children in crisis situations with over 15 years of experience in social work.",
+    teamRole2: "Project Manager",
+    teamBio2: "Coordinates aid projects and works directly with families and social services.",
+    teamRole3: "Chief Financial Officer",
+    teamBio3: "Responsible for transparent use of funds and budget planning.",
+    teamRole4: "Head of Communications",
+    teamBio4: "Responsible for public relations and donor communication.",
 
-                // Донация
-                donationTitle: "Ihre Spende bewirkt Wunder",
-                donationText: "Mit Ihrer Hilfe bauen wir Brunnen, installieren Wassersysteme und schaffen nachhaltigen Zugang zu sauberem Wasser.",
-                chooseTitle: "Wählen Sie Ihren Beitrag",
-                chooseText: "Jeder Betrag hilft Leben zu retten",
-                once: "Einmalig",
-                monthly: "Monatlich",
-                next: "Weiter",
+    impactTitle: "Our Impact",
+    impact1: "Children supported",
+    impact2: "Families assisted",
+    impact3: "Projects delivered",
+    impact4: "Volunteers engaged",
 
-                // Футер
-                privacy: "Datenschutz",
-                imprint: "Impressum",
-                contact: "Kontakt",
-                rights: "© 2025 Hilfehub."
-            },
-            en: {
-                // Навигация
-                about: "About us",
-                member: "Become a member",
-                partners: "Partners",
-                vacation: "Request vacation",
-                sendDataTitle: "Become a sponsor",
-                followUs: "Follow us",
-                willYouReceive: "Will you receive rent money or",
-                contactTitle: "Contact",
-                makeAwish: "Währinger Straße 169-171 3/4 1180 Vienna",
+    partnersTitle: "Our Partners",
+    ctaTitle: "Become Part of Our Mission",
+    ctaText: "Together we can give hope to children. Support our work with your donation or as a volunteer.",
+    ctaButton1: "Donate Now",
+    ctaButton2: "Volunteer",
 
+    // Footer
+    privacy: "Privacy Policy",
+    imprint: "Imprint",
+    rights: "© 2025 Hilfehub."
+}
 
-                contactTitle: "Contact",
-                officeHours: "Office Hours",
-                officeHoursText: "Tuesday – Friday 10:00 am – 2:00 pm",
-                phoneTitle: "Phone",
-                bankTransfer: "Bank Transfer",
-                bankDetails: "First Bank: IBAN: AT52 2011 1404 1027 7701 BIC: GIBAATWWXXX",
-                donateNow: "DONATE NOW >",
-                becomeMember: "SUBSCRIBE TO THE NEWSLETTER >",
-
-
-                navAbout: "About us",
-                navMember: "Become a member",
-                navPartners: "Partners",
-                navPartnerHotels: "Partner hotels",
-                navPartnerOrgs: "Partner organizations",
-                navVacation: "Request vacation",
-                navMore: "More",
-                navAktuelles: "News",
-                navPresse: "Press",
-                navGutschein: "2for1 voucher",
-                navTermine: "Appointments",
-
-                // Герой
-                heroTitle: "Clean Water <br> for all",
-                heroSubtitle: "Every person deserves access to clean drinking water",
-                heroText: "771 million people have no access to clean water. Together we can change that.",
-                helpNow: "Help now",
-                learnMore: "Learn more",
-
-                // Статистика
-                crisisTitle: "The Water Crisis",
-                stat1: "People without clean water",
-                stat2: "People worldwide affected",
-                stat3: "women spend daily fetching water",
-                stat4: "die daily from water-related diseases",
-                stat5: "have no clean water",
-                stat6: "under 5 die annually from diarrhea",
-
-                // Форма
-                formTitle: "Donate now",
-                personalData: "Personal Data",
-                firstName: "First Name",
-                lastName: "Last Name",
-                email: "Email",
-                phone: "Phone Number",
-                donationAmount: "Donation Amount",
-                oneTime: "One Time",
-                monthly: "Monthly",
-                otherAmount: "Other Amount",
-                continue: "Donate today",
-                sendButton: "Send now",
-
-                // Воздействие
-                impactTitle: "How Water Scarcity Destroys Lives",
-                impact1: "Health at Risk",
-                impact1Text: "Contaminated water causes diseases like cholera and diarrhea. Over 1,000 children die daily from water-related diseases.",
-                impact2: "Education Impossible",
-                impact2Text: "Children, especially girls, cannot attend school because they spend hours fetching water.",
-                impact3: "Poverty Reinforced",
-                impact3Text: "Without clean water, communities cannot thrive. Agriculture and economy suffer from the water crisis.",
-                impact4: "Women Most Affected",
-                impact4Text: "Women and girls bear the brunt of the water crisis. They spend hours daily collecting water.",
-                impact5: "Children Suffer Most",
-                impact5Text: "Millions of children have never drunk clean water. Their future depends on our help.",
-                impact6: "Hope for the Future",
-                impact6Text: "With every well we build, we give children a better future and the chance for a healthy life.",
-
-                // Донация
-                donationTitle: "Your Donation Works Wonders",
-                donationText: "With your help, we build wells, install water systems, and create sustainable access to clean water.",
-                chooseTitle: "Choose Your Contribution",
-                chooseText: "Every amount helps save lives",
-                once: "Once",
-                monthly: "Monthly",
-                next: "Next",
-
-                // Футер
-                privacy: "Privacy",
-                imprint: "Imprint",
-                contact: "Contact",
-                rights: "© 2025 Hilfehub."
-            }
         };
 
         // Функция перевода страницы
