@@ -332,7 +332,7 @@ body {
 }
 
 .team-img-container {
-    height: 320px;
+    height: 650px;
     overflow: hidden;
     position: relative;
 }
@@ -379,7 +379,7 @@ body {
 
 @media (max-width: 768px) {
     .team-img-container {
-        height: 280px;
+        height: 575px;
     }
     
     .team-name {
