@@ -379,7 +379,7 @@ body {
 
 @media (max-width: 768px) {
     .team-img-container {
-        height: 610px;
+        height: 700px;
     }
     
     .team-name {
@@ -394,4 +394,5 @@ body {
         font-size: 1rem;
     }
 }
+
 
