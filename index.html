@@ -1299,6 +1299,10 @@
           navStartseite: "Startseite",
           ihreUnterstützung:
             "Ihre Unterstützung hilft uns, <br /> Herzenswünsche schwer kranker Kinder <br /> wahr werden zu lassen",
+          cookiesMessage:
+            "Wir verwenden Cookies, um sicherzustellen, dass wir Ihnen das beste Erlebnis auf unserer Website bieten.",
+          learnMore: "Mehr erfahren",
+          gotIt: "Verstanden!",
 
           officeHours: "Bürozeiten",
           officeHoursText: "Dienstag – Freitag 10:00 Uhr – 14:00 Uhr",
@@ -1405,6 +1409,10 @@
           navStartseite: "Home",
           ihreUnterstützung:
             "Your support helps us to <br /> Heartfelt wishes of seriously ill children <br /> to make it come true",
+          cookiesMessage:
+            "We use cookies to ensure that we give you the best experience on our website.",
+          learnMore: "Learn More",
+          gotIt: "Got it!",
 
           officeHours: "Office Hours",
           officeHoursText: "Tuesday – Friday 10:00 am – 2:00 pm",
@@ -1711,14 +1719,21 @@
 
     <!-- Cookie Consent Banner -->
     <div id="cookie-banner" class="cookie-banner">
-      <p>
-        We use cookies to ensure that we give you the best experience on our
-        website.
-        <a id="learn-more-link" href="#" target="_blank" class="learn-more"
-          >Learn More</a
+      <p data-i18n="cookiesMessage">
+        Wir verwenden Cookies, um sicherzustellen, dass wir Ihnen das beste
+        Erlebnis auf unserer Website bieten.
+        <a
+          data-i18n="learnMore"
+          id="learn-more-link"
+          href="privacy-policy.html"
+          target="_blank"
+          class="learn-more"
+          >Mehr erfahren</a
         >
       </p>
-      <button id="cookie-accept" class="cookie-btn">Got it!</button>
+      <button id="cookie-accept" class="cookie-btn" data-i18n="gotIt">
+        Verstanden!
+      </button>
     </div>
 
     <script>
@@ -1743,4 +1758,3 @@
     </script>
   </body>
 </html>
-
