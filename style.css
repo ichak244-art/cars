@@ -90,6 +90,7 @@
     .navbar {
         transition: all 0.4s ease;
     }
+
     /* Фон для героя с эффектом воды */
     .water-bg {
         position: absolute;
@@ -129,28 +130,29 @@
     }
 
     /* Стили для формы пожертвований */
-.donation-form {
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-}
+    .donation-form {
+        background-color: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+    }
 
-.donation-option {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #cbd5e1;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #0891b2;
-  width: 100%;
-  height: 50px; /* прямоугольник */
-}
+    .donation-option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #cbd5e1;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #0891b2;
+        width: 100%;
+        height: 50px;
+        /* прямоугольник */
+    }
 
 
     .donation-option:hover {
@@ -171,18 +173,19 @@
         margin-bottom: 24px;
     }
 
-    .oneTimeButton{
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
+    .oneTimeButton {
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
     }
-    .monthlyButton{
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
+
+    .monthlyButton {
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
     }
 
 
     .frequency-btn {
-        width: 2000px; 
+        width: 2000px;
         padding: 7px;
         border: 2px solid #cbd5e1;
         background: white;
@@ -203,83 +206,85 @@
         height: 1000px;
     }
 
-/* Стили для мобильного меню */
-#mobile-menu {
-    position: sticky; /* вместо absolute */
-    top: 64px; /* высота шапки navbar */
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
+    /* Стили для мобильного меню */
+    #mobile-menu {
+        position: sticky;
+        /* вместо absolute */
+        top: 64px;
+        /* высота шапки navbar */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
 
-#mobile-menu.active {
-    max-height: 1000px;
-}
+    #mobile-menu.active {
+        max-height: 1000px;
+    }
 
-.rotate-180 {
-    transform: rotate(180deg);
-}
+    .rotate-180 {
+        transform: rotate(180deg);
+    }
 
-#mobile-menu a,
-#mobile-menu>div {
-    padding: 12px 15px;
-    border-radius: 6px;
-    transition: background-color 0.2s;
-}
+    #mobile-menu a,
+    #mobile-menu>div {
+        padding: 12px 15px;
+        border-radius: 6px;
+        transition: background-color 0.2s;
+    }
 
-#mobile-menu a:hover,
-#mobile-menu>div:hover {
-    background-color: #f0fdfa;
-}
+    #mobile-menu a:hover,
+    #mobile-menu>div:hover {
+        background-color: #f0fdfa;
+    }
 
-#mobile-partner-menu,
-#mobile-mehr-menu {
-    padding-left: 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-}
+    #mobile-partner-menu,
+    #mobile-mehr-menu {
+        padding-left: 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
 
-#mobile-partner-menu.active,
-#mobile-mehr-menu.active {
-    max-height: 500px;
-}
+    #mobile-partner-menu.active,
+    #mobile-mehr-menu.active {
+        max-height: 500px;
+    }
 
-#mobile-partner-menu a,
-#mobile-mehr-menu a {
-    padding: 8px 15px;
-    font-size: 0.95rem;
-    display: block;
-}
+    #mobile-partner-menu a,
+    #mobile-mehr-menu a {
+        padding: 8px 15px;
+        font-size: 0.95rem;
+        display: block;
+    }
 
-#partner-icon,
-#mehr-icon {
-    transition: transform 0.3s ease;
-}
+    #partner-icon,
+    #mehr-icon {
+        transition: transform 0.3s ease;
+    }
 
-.mobile-menu-item {
-    border-bottom: 1px solid #f0f0f0;
-    padding: 12px 0;
-}
+    .mobile-menu-item {
+        border-bottom: 1px solid #f0f0f0;
+        padding: 12px 0;
+    }
 
-.hero {
-    position: relative;
-    min-height: 40vh;
-    overflow: hidden;
-}
+    .hero {
+        position: relative;
+        min-height: 40vh;
+        overflow: hidden;
+    }
 
-.hero img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    image-rendering: -webkit-optimize-contrast;
-    /* убирает размытость на iOS */
-}
+    .hero img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        image-rendering: -webkit-optimize-contrast;
+        /* убирает размытость на iOS */
+    }
 
     @supports (-webkit-touch-callout: none) {
         .hero img {
@@ -287,44 +292,49 @@
             /* чётче на iPhone */
         }
     }
-    .btn-green{
+
+    .btn-green {
         background-color: #28a745 !important;
-        
+
     }
+
     .bg-gray-900 {
-        background-color: #A0EBA7    !important;
+        background-color: #A0EBA7 !important;
     }
 
     .h1Color {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(90deg, #c08a2e, #e6c882, #c08a2e);
-       background-clip: text;
-      color: transparent;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(90deg, #c08a2e, #e6c882, #c08a2e);
+        background-clip: text;
+        color: transparent;
     }
+
     .bgFirstButtom {
         background-color: #f8c600;
     }
+
     .bg-gradient-to-r {
         background-color: white;
     }
+
     .andererBetrag {
         font-size: 16.5px;
     }
 
     @media (max-width: 768px) {
-    .team-img-container {
-        height: 575px;
+        .team-img-container {
+            height: 575px;
+        }
+
+        .team-name {
+            font-size: 1.5rem;
+        }
+
+        .team-role {
+            font-size: 1.1rem;
+        }
+
+        .team-bio {
+            font-size: 1rem;
+        }
     }
-    
-    .team-name {
-        font-size: 1.5rem;
-    }
-    
-    .team-role {
-        font-size: 1.1rem;
-    }
-    
-    .team-bio {
-        font-size: 1rem;
-    }
-}
