@@ -281,7 +281,7 @@
     <main class="mx-auto max-w-3xl px-4">
       <h1
         data-i18n="privacy.heading"
-        class="text-5xl md:text-6xl font-bold mb-6"
+        class="text-5xl md:text-[51px] font-bold mb-14 mt-10"
       >
         Datenschutzerklärung
       </h1>
@@ -454,7 +454,7 @@
         </h2>
         <p
           data-i18n="privacy.contact.text"
-          class="text-gray-700 animate-fadeIn"
+          class="text-gray-700 animate-fadeIn mb-6"
         >
           Wenn Sie Fragen zum Datenschutz haben, können Sie uns jederzeit unter
           folgender Adresse kontaktieren:
@@ -607,6 +607,208 @@
         </div>
       </div>
     </footer>
+    <script>
+      const translations = {
+        de: {
+          // Навигация
+          navStartseite: "Startseite",
+          navAbout: "Über uns",
+          navMember: "Mitglied werden",
+          navPartners: "Partner",
+          navPartnerHotels: "Partnerhotels",
+          navPartnerOrgs: "Partnerorganisationen",
+          navVacation: "Unsere Projekte",
+          navMore: "Nachrichten",
+          navAktuelles: "Aktuelles",
+          navPresse: "Presse",
+          navGutschein: "2for1 Gutschein",
+          navTermine: "Termine",
+          navOneSong: "One Song, one family",
+
+          // Политика конфиденциальности
+          "privacy.heading": "Datenschutzerklärung",
+          "privacy.intro.title": "Einleitung",
+          "privacy.intro.text":
+            "Wir nehmen den Schutz Ihrer personenbezogenen Daten sehr ernst. In dieser Erklärung informieren wir Sie darüber, welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie haben.",
+          "privacy.data.title": "Welche Daten wir erheben",
+          "privacy.data.personal":
+            "Persönliche Daten (z. B. Name, E-Mail-Adresse, Telefonnummer).",
+          "privacy.data.technical":
+            "Technische Daten (z. B. IP-Adresse, Browsertyp, Geräteinformationen).",
+          "privacy.data.cookies":
+            "Daten, die durch Cookies oder ähnliche Technologien gesammelt werden.",
+          "privacy.purpose.title": "Zwecke der Datenverarbeitung",
+          "privacy.purpose.service":
+            "Bereitstellung und Verbesserung unserer Dienstleistungen.",
+          "privacy.purpose.legal": "Erfüllung gesetzlicher Verpflichtungen.",
+          "privacy.purpose.security": "Sicherheit und Missbrauchsvermeidung.",
+          "privacy.purpose.communication": "Kommunikation mit Ihnen.",
+          "privacy.cookies.title": "Cookies",
+          "privacy.cookies.text":
+            "Wir verwenden Cookies, um unsere Website funktionsfähig zu machen, Ihre Einstellungen zu speichern und statistische Daten zu erheben. Weitere Informationen finden Sie in unserer",
+          "privacy.cookies.link": "Cookie-Richtlinie",
+          "privacy.rights.title": "Ihre Rechte",
+          "privacy.rights.access":
+            "Recht auf Auskunft über die gespeicherten Daten.",
+          "privacy.rights.rectification":
+            "Recht auf Berichtigung unrichtiger Daten.",
+          "privacy.rights.deletion":
+            "Recht auf Löschung („Recht auf Vergessenwerden“).",
+          "privacy.rights.restriction":
+            "Recht auf Einschränkung der Verarbeitung.",
+          "privacy.rights.portability": "Recht auf Datenübertragbarkeit.",
+          "privacy.rights.objection":
+            "Recht auf Widerspruch gegen bestimmte Verarbeitungen.",
+          "privacy.storage.title": "Speicherdauer",
+          "privacy.storage.text":
+            "Wir speichern personenbezogene Daten nur so lange, wie es für die Zwecke notwendig ist, für die sie erhoben wurden, oder wie es gesetzlich vorgeschrieben ist.",
+          "privacy.thirdparties.title": "Weitergabe an Dritte",
+          "privacy.thirdparties.text":
+            "Wir geben personenbezogene Daten nicht an Dritte weiter, außer wenn dies für die Erfüllung unserer Leistungen notwendig ist, rechtlich vorgeschrieben oder durch Ihre Einwilligung gedeckt ist.",
+          "privacy.changes.title": "Änderungen",
+          "privacy.changes.text":
+            "Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu ändern. Die aktuelle Version ist jederzeit auf dieser Seite verfügbar.",
+          "privacy.contact.title": "Kontakt",
+          "privacy.contact.text":
+            "Wenn Sie Fragen zum Datenschutz haben, können Sie uns jederzeit unter folgender Adresse kontaktieren:",
+
+          // Футер
+          privacy: "Datenschutz",
+          imprint: "Impressum",
+          contact: "Kontakt",
+          contactTitle: "Kontakt",
+          makeAwish: "Währinger Straße 169-171 4/3 1180 Wien",
+          officeHours: "Bürozeiten",
+          officeHoursText: "Dienstag – Freitag<br />10:00 Uhr – 14:00 Uhr",
+          phoneTitle: "Telefon",
+          donateNow: "JETZT SPENDEN >",
+          becomeMember: "ZUM NEWSLETTER ANMELDEN >",
+          rights: "© 2025 Hilfehub.",
+        },
+
+        en: {
+          // Navigation
+          navStartseite: "Home",
+          navAbout: "About us",
+          navMember: "Become a member",
+          navPartners: "Partners",
+          navPartnerHotels: "Partner hotels",
+          navPartnerOrgs: "Partner organizations",
+          navVacation: "Our projects",
+          navMore: "News",
+          navAktuelles: "News",
+          navPresse: "Press",
+          navGutschein: "2for1 Voucher",
+          navTermine: "Events",
+          navOneSong: "One Song, one family",
+
+          // Политика конфиденциальности
+          "privacy.heading": "Privacy Policy",
+          "privacy.intro.title": "Introduction",
+          "privacy.intro.text":
+            "We take the protection of your personal data very seriously. In this statement, we inform you about what data we collect, how we use it, and what rights you have.",
+          "privacy.data.title": "What data we collect",
+          "privacy.data.personal":
+            "Personal data (e.g., name, email address, phone number).",
+          "privacy.data.technical":
+            "Technical data (e.g., IP address, browser type, device information).",
+          "privacy.data.cookies":
+            "Data collected through cookies or similar technologies.",
+          "privacy.purpose.title": "Purposes of data processing",
+          "privacy.purpose.service": "Providing and improving our services.",
+          "privacy.purpose.legal": "Fulfillment of legal obligations.",
+          "privacy.purpose.security": "Security and abuse prevention.",
+          "privacy.purpose.communication": "Communication with you.",
+          "privacy.cookies.title": "Cookies",
+          "privacy.cookies.text":
+            "We use cookies to make our website functional, save your settings, and collect statistical data. For more information, see our",
+          "privacy.cookies.link": "Cookie Policy",
+          "privacy.rights.title": "Your Rights",
+          "privacy.rights.access": "Right to access stored data.",
+          "privacy.rights.rectification": "Right to correct inaccurate data.",
+          "privacy.rights.deletion":
+            'Right to deletion ("right to be forgotten").',
+          "privacy.rights.restriction": "Right to restriction of processing.",
+          "privacy.rights.portability": "Right to data portability.",
+          "privacy.rights.objection": "Right to object to certain processing.",
+          "privacy.storage.title": "Storage Duration",
+          "privacy.storage.text":
+            "We store personal data only as long as necessary for the purposes for which it was collected or as required by law.",
+          "privacy.thirdparties.title": "Disclosure to Third Parties",
+          "privacy.thirdparties.text":
+            "We do not disclose personal data to third parties unless necessary for the performance of our services, legally required, or covered by your consent.",
+          "privacy.changes.title": "Changes",
+          "privacy.changes.text":
+            "We reserve the right to change this privacy policy as needed. The current version is always available on this page.",
+          "privacy.contact.title": "Contact",
+          "privacy.contact.text":
+            "If you have questions about data protection, you can contact us at any time at the following address:",
+
+          // Футер
+          privacy: "Privacy Policy",
+          imprint: "Imprint",
+          contact: "Contact",
+          contactTitle: "Contact",
+          makeAwish: "Währinger Straße 169-171 4/3 1180 Vienna",
+          officeHours: "Office Hours",
+          officeHoursText: "Tuesday – Friday<br />10:00 am – 2:00 pm",
+          phoneTitle: "Phone",
+          donateNow: "DONATE NOW >",
+          becomeMember: "SUBSCRIBE TO THE NEWSLETTER >",
+          rights: "© 2025 Hilfehub.",
+        },
+      };
+
+      // Функция перевода страницы
+      function translatePage(lang) {
+        // Обновляем текст элементов с атрибутом data-i18n
+        document
+          .querySelectorAll("[data-i18n], [data-i18n-html]")
+          .forEach((element) => {
+            const key =
+              element.getAttribute("data-i18n") ||
+              element.getAttribute("data-i18n-html");
+
+            if (translations[lang][key]) {
+              if (
+                element.tagName === "INPUT" ||
+                element.tagName === "TEXTAREA"
+              ) {
+                element.placeholder = translations[lang][key];
+              } else if (element.hasAttribute("data-i18n-html")) {
+                element.innerHTML = translations[lang][key];
+              } else {
+                element.textContent = translations[lang][key];
+              }
+            }
+          });
+
+        // Обновляем кнопку языка
+        const langButton = document.getElementById("language-toggle");
+        if (langButton) {
+          langButton.querySelector("span").textContent = lang.toUpperCase();
+        }
+
+        // Сохраняем текущий язык в переменной (не используем localStorage)
+        window.currentLanguage = lang;
+      }
+
+      // Инициализация перевода при загрузке
+      document.addEventListener("DOMContentLoaded", function () {
+        const defaultLang = "de";
+        window.currentLanguage = defaultLang;
+        translatePage(defaultLang);
+
+        // Обработчик для кнопки языка
+        const langButton = document.getElementById("language-toggle");
+        if (langButton) {
+          langButton.addEventListener("click", function () {
+            const currentLang = window.currentLanguage || "de";
+            const newLang = currentLang === "de" ? "en" : "de";
+            translatePage(newLang);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
-
