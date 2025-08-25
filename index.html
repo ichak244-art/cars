@@ -810,7 +810,244 @@
         }
       });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. Анимация падающих капель воды
+        function createWaterDrops() {
+          const hero = document.querySelector(".hero");
+          if (!hero) return;
+
+          const dropsCount = 15;
+
+          for (let i = 0; i < dropsCount; i++) {
+            const drop = document.createElement("div");
+            drop.classList.add("water-drop");
+            drop.style.left = `${Math.random() * 100}%`;
+            drop.style.animationDelay = `${Math.random() * 5}s`;
+            hero.appendChild(drop);
+          }
+        }
+
+        // 2. Анимация при скролле
+        function setupScrollAnimations() {
+          const animatedElements = document.querySelectorAll(
+            ".stat-card, .impact-img, h2, h3, p, .btn"
+          );
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  if (
+                    entry.target.classList.contains("stat-card") ||
+                    entry.target.classList.contains("impact-img")
+                  ) {
+                    entry.target.classList.add("visible");
+                  } else {
+                    entry.target.classList.add("animate-fadeIn");
+                  }
+                }
+              });
+            },
+            {
+              threshold: 0.1,
+            }
+          );
+
+          animatedElements.forEach((el) => {
+            observer.observe(el);
+          });
+        }
+
+        // 3. Эффект ряби для кнопок
+        function setupRippleEffect() {
+          const buttons = document.querySelectorAll(".ripple");
+
+          buttons.forEach((button) => {
+            button.addEventListener("click", function (e) {
+              const ripple = document.createElement("span");
+              ripple.classList.add("ripple-effect");
+
+              const rect = button.getBoundingClientRect();
+              const size = Math.max(rect.width, rect.height);
+              const x = e.clientX - rect.left - size / 2;
+              const y = e.clientY - rect.top - size / 2;
+
+              ripple.style.width = ripple.style.height = `${size}px`;
+              ripple.style.left = `${x}px`;
+              ripple.style.top = `${y}px`;
+
+              button.appendChild(ripple);
+
+              setTimeout(() => {
+                ripple.remove();
+              }, 600);
+            });
+          });
+        }
+
+        // 4. Анимация навигации при скролле
+        function setupNavbarAnimation() {
+          const navbar = document.querySelector(".navbar");
+          if (!navbar) return;
+
+          window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
+          });
+        }
+
+        // 5. Парящая анимация для важных элементов
+        function setupFloatingElements() {
+          const floatingElements = document.querySelectorAll(".btn-primary");
+          floatingElements.forEach((el) => {
+            el.classList.add("animate-float");
+            el.style.animationDelay = `${Math.random() * 2}s`;
+          });
+        }
+
+        // 6. Анимация при наведении на карточки
+        function setupHoverAnimations() {
+          const cards = document.querySelectorAll(".stat-card");
+          cards.forEach((card) => {
+            card.classList.add("hover-scale");
+          });
+        }
+
+        // 7. Параллакс эффект для героя
+        function setupParallax() {
+          const hero = document.querySelector(".hero");
+          if (!hero) return;
+
+          hero.classList.add("parallax");
+        }
+
+        // 8. Выбор суммы пожертвования
+        function setupDonationOptions() {
+          const donationOptions = document.querySelectorAll(".donation-option");
+          const donateBtn = document.querySelector(".btn-donate");
+
+          donationOptions.forEach((option) => {
+            option.addEventListener("click", function () {
+              // Убираем выделение у всех
+              donationOptions.forEach((opt) =>
+                opt.classList.remove("selected")
+              );
+
+              // Выделяем текущий
+              this.classList.add("selected");
+
+              // Активируем кнопку "Пожертвовать"
+              if (donateBtn) {
+                donateBtn.disabled = false;
+                donateBtn.classList.remove("opacity-70", "cursor-not-allowed");
+                donateBtn.classList.add("cursor-pointer");
+              }
+            });
+          });
+        }
+
+        // 9. Переключатель периодичности
+        function setupFrequencySelector() {
+          const frequencyBtns = document.querySelectorAll(".frequency-btn");
+
+          frequencyBtns.forEach((btn) => {
+            btn.addEventListener("click", function () {
+              frequencyBtns.forEach((b) => b.classList.remove("selected"));
+              this.classList.add("selected");
+            });
+          });
+        }
+
+        // 10. Управление мобильным меню
+        function setupMobileMenu() {
+          const mobileBtn = document.getElementById("mobile-menu-button");
+          const mobileMenu = document.getElementById("mobile-menu");
+          const iconOpen = document.getElementById("mobile-menu-icon-open");
+          const iconClose = document.getElementById("mobile-menu-icon-close");
+          const partnerBtn = document.getElementById("mobile-partner-btn");
+          const partnerMenu = document.getElementById("mobile-partner-menu");
+          const partnerIcon = document.getElementById("partner-icon");
+          const mehrBtn = document.getElementById("mobile-mehr-btn");
+          const mehrMenu = document.getElementById("mobile-mehr-menu");
+          const mehrIcon = document.getElementById("mehr-icon");
+
+          // Переключение основного меню
+          if (mobileBtn) {
+            mobileBtn.addEventListener("click", () => {
+              mobileMenu.classList.toggle("hidden");
+              mobileMenu.classList.toggle("active");
+              iconOpen.classList.toggle("hidden");
+              iconClose.classList.toggle("hidden");
+            });
+          }
+
+          // Переключение подменю Partner
+          if (partnerBtn) {
+            partnerBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              partnerMenu.classList.toggle("active");
+              partnerIcon.classList.toggle("rotate-180");
+            });
+          }
+
+          // Переключение подменю Mehr
+          if (mehrBtn) {
+            mehrBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              mehrMenu.classList.toggle("active");
+              mehrIcon.classList.toggle("rotate-180");
+            });
+          }
+
+          // Закрытие меню при клике снаружи
+          document.addEventListener("click", (e) => {
+            if (
+              !mobileMenu.contains(e.target) &&
+              !mobileBtn.contains(e.target)
+            ) {
+              mobileMenu.classList.add("hidden");
+              mobileMenu.classList.remove("active");
+              iconOpen.classList.remove("hidden");
+              iconClose.classList.add("hidden");
+
+              // Также закрываем подменю
+              partnerMenu.classList.remove("active");
+              mehrMenu.classList.remove("active");
+              partnerIcon.classList.remove("rotate-180");
+              mehrIcon.classList.remove("rotate-180");
+            }
+          });
+        }
+
+        // Инициализация всех анимаций
+        function initAnimations() {
+          createWaterDrops();
+          setupScrollAnimations();
+          setupRippleEffect();
+          setupNavbarAnimation();
+          setupFloatingElements();
+          setupHoverAnimations();
+          setupParallax();
+          setupDonationOptions();
+          setupFrequencySelector();
+          setupMobileMenu();
+
+          // Добавление задержек для анимации
+          document.querySelectorAll("h2").forEach((el, i) => {
+            el.classList.add(`animate-delay-${(i + 1) * 100}`);
+          });
+        }
+
+        // Запуск при полной загрузке страницы
+        window.addEventListener("load", initAnimations);
+      });
+    </script>
   </body>
 </html>
+
 
 
