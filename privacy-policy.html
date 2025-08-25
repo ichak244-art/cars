@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hilfehub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="privacy-policy.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar sticky top-0 w-full backdrop-blur-md z-50 border-b border-gray-100 shadow-sm"
+      style="background-color: white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Лого -->
+          <!-- Название крупным планом -->
+          <div class="flex flex-col items-center">
+            <img
+              src="processed_image (1).png"
+              alt="Icon"
+              class="h-12 w-12 -translate-x-1 translate-y-1"
+            />
+            <span class="text-xl font-extrabold h1Color mb-2">Hilfehub</span>
+          </div>
+
+          <!-- Десктоп навигация -->
+          <div
+            class="hidden md:flex items-center space-x-6 relative"
+            id="desktop-menu"
+          >
+            <a
+              href="#startseite"
+              data-i18n="navStartseite"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Startseite</a
+            >
+            <a
+              href="#about"
+              data-i18n="navAbout"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Über uns</a
+            >
+            <a
+              href="#member"
+              data-i18n="navMember"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Mitglied werden</a
+            >
+
+            <!-- Partner dropdown -->
+            <div class="relative group">
+              <button
+                data-i18n="navPartners"
+                class="text-gray-800 hover:text-cyan-500 transition-colors font-medium flex items-center"
+              >
+                Partner
+                <svg
+                  class="w-4 h-4 ml-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 mt-2 w-56 z-10"
+              >
+                <a
+                  href="#partnerhotels"
+                  data-i18n="navPartnerHotels"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Partnerhotels</a
+                >
+                <a
+                  href="#partnerorgs"
+                  data-i18n="navPartnerOrgs"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Partnerorganisationen</a
+                >
+              </div>
+            </div>
+
+            <a
+              href="#vacation"
+              data-i18n="navVacation"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Unsere Projekte</a
+            >
+
+            <!-- Mehr dropdown -->
+            <div class="relative group">
+              <button
+                data-i18n="navMore"
+                class="text-gray-800 hover:text-cyan-500 transition-colors font-medium flex items-center"
+              >
+                Nachrichten
+                <svg
+                  class="w-4 h-4 ml-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 mt-2 w-56 z-10"
+              >
+                <a
+                  href="#aktuelles"
+                  data-i18n="navAktuelles"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Aktuelles</a
+                >
+                <a
+                  href="#presse"
+                  data-i18n="navPresse"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Presse</a
+                >
+                <a
+                  href="#gutschein"
+                  data-i18n="navGutschein"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >2for1 Gutschein</a
+                >
+                <a
+                  href="#termine"
+                  data-i18n="navTermine"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Termine</a
+                >
+                <a
+                  href="#onesong"
+                  data-i18n="navOneSong"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >One Song, one family</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Кнопка мобильного меню и переключатель языка -->
+          <div class="flex items-center gap-4">
+            <!-- Кнопка мобильного меню -->
+            <button
+              id="mobile-menu-button"
+              class="md:hidden text-gray-800 focus:outline-none"
+            >
+              <svg
+                id="mobile-menu-icon-open"
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+              <svg
+                id="mobile-menu-icon-close"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <!-- Переключатель языка -->
+            <button
+              id="language-toggle"
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium h-9 rounded-md px-3 bg-gray border border-white text-gray-700 bg-yellow hover:bg-gray-50"
+            >
+              <svg
+                class="lucide lucide-languages w-4 h-4 mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="m5 8 6 6" />
+                <path d="m4 14 6-6 2-3" />
+                <path d="M2 5h12" />
+                <path d="M7 2h1" />
+                <path d="m22 22-5-10-5 10" />
+                <path d="M14 18h6" />
+              </svg>
+              <span>DE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Мобильное меню -->
+    <div
+      id="mobile-menu"
+      class="md:hidden hidden flex-col space-y-2 text-left w-full bg-white px-4 py-2 absolute top-16 left-0 shadow-lg z-40"
+    >
+      <a
+        href="#startseite"
+        data-i18n="navStartseite"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Startseite</a
+      >
+      <a
+        href="#about"
+        data-i18n="navAbout"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Über uns</a
+      >
+      <a
+        href="#member"
+        data-i18n="navMember"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Mitglied werden</a
+      >
+
+      <!-- Partner -->
+      <div class="py-3 mobile-menu-item">
+        <button
+          id="mobile-partner-btn"
+          data-i18n="navPartners"
+          class="w-full text-left text-gray-800 font-medium flex items-center justify-between"
+        >
+          Partner
+        </button>
+      </div>
+
+      <a
+        href="#vacation"
+        data-i18n="navVacation"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Unsere Projekte</a
+      >
+
+      <!-- Mehr -->
+      <div class="py-3 mobile-menu-item">
+        <button
+          id="mobile-mehr-btn"
+          data-i18n="navMore"
+          class="w-full text-left text-gray-800 font-medium flex items-center justify-between"
+        >
+          Nachrichten
+        </button>
+      </div>
+    </div>
+
+    <main class="mx-auto max-w-3xl px-4">
+      <h1 data-i18n="privacy.heading" class="font-bold mb-14 mt-10 pol">
+        Datenschutzerklärung
+      </h1>
+
+      <section id="intro">
+        <h2
+          data-i18n="privacy.intro.title"
+          class="text-3xl md:text-4xl font-bold mb-6"
+          class="text-3xl md:text-4xl font-bold mb-6"
+        >
+          Einleitung
+        </h2>
+        <p data-i18n="privacy.intro.text" class="text-gray-700 animate-fadeIn">
+          Wir nehmen den Schutz Ihrer personenbezogenen Daten sehr ernst. In
+          dieser Erklärung informieren wir Sie darüber, welche Daten wir
+          erheben, wie wir sie verwenden und welche Rechte Sie haben.
+        </p>
+      </section>
+
+      <section id="what-data">
+        <h2
+          data-i18n="privacy.data.title"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          Welche Daten wir erheben
+        </h2>
+        <ul class="text-gray-700 animate-fadeIn">
+          <li data-i18n="privacy.data.personal">
+            Persönliche Daten (z. B. Name, E-Mail-Adresse, Telefonnummer).
+          </li>
+          <li data-i18n="privacy.data.technical">
+            Technische Daten (z. B. IP-Adresse, Browsertyp,
+            Geräteinformationen).
+          </li>
+          <li data-i18n="privacy.data.cookies">
+            Daten, die durch Cookies oder ähnliche Technologien gesammelt
+            werden.
+          </li>
+        </ul>
+      </section>
+
+      <section id="purpose">
+        <h2
+          data-i18n="privacy.purpose.title"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          Zwecke der Datenverarbeitung
+        </h2>
+        <ul class="text-gray-700 animate-fadeIn">
+          <li data-i18n="privacy.purpose.service">
+            Bereitstellung und Verbesserung unserer Dienstleistungen.
+          </li>
+          <li data-i18n="privacy.purpose.legal">
+            Erfüllung gesetzlicher Verpflichtungen.
+          </li>
+          <li data-i18n="privacy.purpose.security">
+            Sicherheit und Missbrauchsvermeidung.
+          </li>
+          <li data-i18n="privacy.purpose.communication">
+            Kommunikation mit Ihnen.
+          </li>
+        </ul>
+      </section>
+
+      <section id="cookies">
+        <h2
+          data-i18n="privacy.cookies.title"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          Cookies
+        </h2>
+        <p
+          data-i18n="privacy.cookies.text"
+          class="text-gray-700 animate-fadeIn"
+        >
+          Wir verwenden Cookies, um unsere Website funktionsfähig zu machen,
+          Ihre Einstellungen zu speichern und statistische Daten zu erheben.
+          Weitere Informationen finden Sie in unserer
+          <a href="cookies.html" data-i18n="privacy.cookies.link"
+            >Cookie-Richtlinie</a
+          >.
+        </p>
+      </section>
+
+      <section id="rights">
+        <h2
+          data-i18n="privacy.rights.title"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          Ihre Rechte
+        </h2>
+        <ul class="text-gray-700 animate-fadeIn">
+          <li data-i18n="privacy.rights.access">
+            Recht auf Auskunft über die gespeicherten Daten.
+          </li>
+          <li data-i18n="privacy.rights.rectification">
+            Recht auf Berichtigung unrichtiger Daten.
+          </li>
+          <li data-i18n="privacy.rights.deletion">
+            Recht auf Löschung („Recht auf Vergessenwerden“).
+          </li>
+          <li data-i18n="privacy.rights.restriction">
+            Recht auf Einschränkung der Verarbeitung.
+          </li>
+          <li data-i18n="privacy.rights.portability">
+            Recht auf Datenübertragbarkeit.
+          </li>
+          <li data-i18n="privacy.rights.objection">
+            Recht auf Widerspruch gegen bestimmte Verarbeitungen.
+          </li>
+        </ul>
+      </section>
+
+      <section id="storage">
+        <h2
+          data-i18n="privacy.storage.title"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          Speicherdauer
+        </h2>
+        <p
+          data-i18n="privacy.storage.text"
+          class="text-gray-700 animate-fadeIn"
+        >
+          Wir speichern personenbezogene Daten nur so lange, wie es für die
+          Zwecke notwendig ist, für die sie erhoben wurden, oder wie es
+          gesetzlich vorgeschrieben ist.
+        </p>
+      </section>
+
+      <section id="third-parties">
+        <h2
+          data-i18n="privacy.thirdparties.title"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          Weitergabe an Dritte
+        </h2>
+        <p
+          data-i18n="privacy.thirdparties.text"
+          class="text-gray-700 animate-fadeIn"
+        >
+          Wir geben personenbezogene Daten nicht an Dritte weiter, außer wenn
+          dies für die Erfüllung unserer Leistungen notwendig ist, rechtlich
+          vorgeschrieben oder durch Ihre Einwilligung gedeckt ist.
+        </p>
+      </section>
+
+      <section id="changes">
+        <h2
+          data-i18n="privacy.changes.title"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          Änderungen
+        </h2>
+        <p
+          data-i18n="privacy.changes.text"
+          class="text-gray-700 animate-fadeIn"
+        >
+          Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu ändern.
+          Die aktuelle Version ist jederzeit auf dieser Seite verfügbar.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2
+          data-i18n="privacy.contact.title"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          Kontakt
+        </h2>
+        <p
+          data-i18n="privacy.contact.text"
+          class="text-gray-700 animate-fadeIn mb-6"
+        >
+          Wenn Sie Fragen zum Datenschutz haben, können Sie uns jederzeit unter
+          folgender Adresse kontaktieren:
+          <a href="mailto:privacy@yourdomain.com">privacy@yourdomain.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer
+      class="bg-cyan-500 text-white py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <!-- Обновленный блок с иконкой и текстом вместо логотипа -->
+          <div class="flex flex-col items-center mb-4 md:mb-0">
+            <div class="mb-2">
+              <img src="processed_image (1).png" alt="Icon" class="h-20 w-20" />
+            </div>
+            <span class="text-3xl font-extrabold h1Color">Hilfehub</span>
+          </div>
+
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="hover:text-cyan-400 transition-colors"
+              data-i18n="privacy"
+              >Datenschutz</a
+            >
+            <a
+              href="#"
+              class="hover:text-cyan-400 transition-colors"
+              data-i18n="imprint"
+              >Impressum</a
+            >
+            <a
+              href="#"
+              class="hover:text-cyan-400 transition-colors"
+              data-i18n="contact"
+              >Kontakt</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+        >
+          <div>
+            <h3 class="text-2xl font-bold mb-4" data-i18n="contactTitle">
+              Kontakt
+            </h3>
+            <p class="mb-4" data-i18n="makeAwish">
+              Währinger Straße 169-171 4/3 1180 Wien
+            </p>
+
+            <h4 class="text-xl font-semibold mt-6 mb-2" data-i18n="officeHours">
+              Bürozeiten
+            </h4>
+            <p data-i18n="officeHoursText">
+              Dienstag – Freitag<br />10:00 Uhr – 14:00 Uhr
+            </p>
+
+            <h4 class="text-xl font-semibold mt-6 mb-2" data-i18n="phoneTitle">
+              Telefon
+            </h4>
+            <p>+43 670 7018780</p>
+            <p>hilfehubwien@gmail.com</p>
+
+            <div class="mt-6 flex items-center space-x-4">
+              <a
+                href="https://www.facebook.com/share/16d6mYTzJt/?mibextid=wwXIfr"
+                target="_blank"
+                class="text-white hover:text-cyan-200 transition-colors"
+              >
+                <i class="fab fa-facebook-f text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="text-white hover:text-cyan-200 transition-colors"
+              >
+                <i class="fab fa-instagram text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="text-white hover:text-cyan-200 transition-colors"
+              >
+                <i class="fab fa-tiktok text-2xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- <div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="bankTransfer">Banküberweisung</h3>
+                    <p data-i18n="bankDetails">Erste Bank:<br>
+                        IBAN: AT52 2011 1404 1027 7701<br>
+                        BIC: GIBAATWWXXX</p>
+                </div> -->
+        </div>
+
+        <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-12 rounded-md bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 shadow-lg transition-all"
+            data-i18n="donateNow"
+          >
+            JETZT SPENDEN >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-12 rounded-md bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 shadow-lg transition-all"
+            data-i18n="becomeMember"
+          >
+            ZUM NEWSLSETTER ANMELDEN >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="mt-8 pt-8 text-center border-t border-white/20">
+          <p data-i18n="rights">© 2025 Hilfehub.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const translations = {
+        de: {
+          // Навигация
+          navStartseite: "Startseite",
+          navAbout: "Über uns",
+          navMember: "Mitglied werden",
+          navPartners: "Partner",
+          navPartnerHotels: "Partnerhotels",
+          navPartnerOrgs: "Partnerorganisationen",
+          navVacation: "Unsere Projekte",
+          navMore: "Nachrichten",
+          navAktuelles: "Aktuelles",
+          navPresse: "Presse",
+          navGutschein: "2for1 Gutschein",
+          navTermine: "Termine",
+          navOneSong: "One Song, one family",
+
+          // Политика конфиденциальности
+          "privacy.heading": "Datenschutzerklärung",
+          "privacy.intro.title": "Einleitung",
+          "privacy.intro.text":
+            "Wir nehmen den Schutz Ihrer personenbezogenen Daten sehr ernst. In dieser Erklärung informieren wir Sie darüber, welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie haben.",
+          "privacy.data.title": "Welche Daten wir erheben",
+          "privacy.data.personal":
+            "Persönliche Daten (z. B. Name, E-Mail-Adresse, Telefonnummer).",
+          "privacy.data.technical":
+            "Technische Daten (z. B. IP-Adresse, Browsertyp, Geräteinformationen).",
+          "privacy.data.cookies":
+            "Daten, die durch Cookies oder ähnliche Technologien gesammelt werden.",
+          "privacy.purpose.title": "Zwecke der Datenverarbeitung",
+          "privacy.purpose.service":
+            "Bereitstellung und Verbesserung unserer Dienstleistungen.",
+          "privacy.purpose.legal": "Erfüllung gesetzlicher Verpflichtungen.",
+          "privacy.purpose.security": "Sicherheit und Missbrauchsvermeidung.",
+          "privacy.purpose.communication": "Kommunikation mit Ihnen.",
+          "privacy.cookies.title": "Cookies",
+          "privacy.cookies.text":
+            "Wir verwenden Cookies, um unsere Website funktionsfähig zu machen, Ihre Einstellungen zu speichern und statistische Daten zu erheben. Weitere Informationen finden Sie in unserer",
+          "privacy.cookies.link": "Cookie-Richtlinie",
+          "privacy.rights.title": "Ihre Rechte",
+          "privacy.rights.access":
+            "Recht auf Auskunft über die gespeicherten Daten.",
+          "privacy.rights.rectification":
+            "Recht auf Berichtigung unrichtiger Daten.",
+          "privacy.rights.deletion":
+            "Recht auf Löschung („Recht auf Vergessenwerden“).",
+          "privacy.rights.restriction":
+            "Recht auf Einschränkung der Verarbeitung.",
+          "privacy.rights.portability": "Recht auf Datenübertragbarkeit.",
+          "privacy.rights.objection":
+            "Recht auf Widerspruch gegen bestimmte Verarbeitungen.",
+          "privacy.storage.title": "Speicherdauer",
+          "privacy.storage.text":
+            "Wir speichern personenbezogene Daten nur so lange, wie es für die Zwecke notwendig ist, für die sie erhoben wurden, oder wie es gesetzlich vorgeschrieben ist.",
+          "privacy.thirdparties.title": "Weitergabe an Dritte",
+          "privacy.thirdparties.text":
+            "Wir geben personenbezogene Daten nicht an Dritte weiter, außer wenn dies für die Erfüllung unserer Leistungen notwendig ist, rechtlich vorgeschrieben oder durch Ihre Einwilligung gedeckt ist.",
+          "privacy.changes.title": "Änderungen",
+          "privacy.changes.text":
+            "Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu ändern. Die aktuelle Version ist jederzeit auf dieser Seite verfügbar.",
+          "privacy.contact.title": "Kontakt",
+          "privacy.contact.text":
+            "Wenn Sie Fragen zum Datenschutz haben, können Sie uns jederzeit unter folgender Adresse kontaktieren:",
+
+          // Футер
+          privacy: "Datenschutz",
+          imprint: "Impressum",
+          contact: "Kontakt",
+          contactTitle: "Kontakt",
+          makeAwish: "Währinger Straße 169-171 4/3 1180 Wien",
+          officeHours: "Bürozeiten",
+          officeHoursText: "Dienstag – Freitag<br />10:00 Uhr – 14:00 Uhr",
+          phoneTitle: "Telefon",
+          donateNow: "JETZT SPENDEN >",
+          becomeMember: "ZUM NEWSLETTER ANMELDEN >",
+          rights: "© 2025 Hilfehub.",
+        },
+
+        en: {
+          // Navigation
+          navStartseite: "Home",
+          navAbout: "About us",
+          navMember: "Become a member",
+          navPartners: "Partners",
+          navPartnerHotels: "Partner hotels",
+          navPartnerOrgs: "Partner organizations",
+          navVacation: "Our projects",
+          navMore: "News",
+          navAktuelles: "News",
+          navPresse: "Press",
+          navGutschein: "2for1 Voucher",
+          navTermine: "Events",
+          navOneSong: "One Song, one family",
+
+          // Политика конфиденциальности
+          "privacy.heading": "Privacy Policy",
+          "privacy.intro.title": "Introduction",
+          "privacy.intro.text":
+            "We take the protection of your personal data very seriously. In this statement, we inform you about what data we collect, how we use it, and what rights you have.",
+          "privacy.data.title": "What data we collect",
+          "privacy.data.personal":
+            "Personal data (e.g., name, email address, phone number).",
+          "privacy.data.technical":
+            "Technical data (e.g., IP address, browser type, device information).",
+          "privacy.data.cookies":
+            "Data collected through cookies or similar technologies.",
+          "privacy.purpose.title": "Purposes of data processing",
+          "privacy.purpose.service": "Providing and improving our services.",
+          "privacy.purpose.legal": "Fulfillment of legal obligations.",
+          "privacy.purpose.security": "Security and abuse prevention.",
+          "privacy.purpose.communication": "Communication with you.",
+          "privacy.cookies.title": "Cookies",
+          "privacy.cookies.text":
+            "We use cookies to make our website functional, save your settings, and collect statistical data. For more information, see our",
+          "privacy.cookies.link": "Cookie Policy",
+          "privacy.rights.title": "Your Rights",
+          "privacy.rights.access": "Right to access stored data.",
+          "privacy.rights.rectification": "Right to correct inaccurate data.",
+          "privacy.rights.deletion":
+            'Right to deletion ("right to be forgotten").',
+          "privacy.rights.restriction": "Right to restriction of processing.",
+          "privacy.rights.portability": "Right to data portability.",
+          "privacy.rights.objection": "Right to object to certain processing.",
+          "privacy.storage.title": "Storage Duration",
+          "privacy.storage.text":
+            "We store personal data only as long as necessary for the purposes for which it was collected or as required by law.",
+          "privacy.thirdparties.title": "Disclosure to Third Parties",
+          "privacy.thirdparties.text":
+            "We do not disclose personal data to third parties unless necessary for the performance of our services, legally required, or covered by your consent.",
+          "privacy.changes.title": "Changes",
+          "privacy.changes.text":
+            "We reserve the right to change this privacy policy as needed. The current version is always available on this page.",
+          "privacy.contact.title": "Contact",
+          "privacy.contact.text":
+            "If you have questions about data protection, you can contact us at any time at the following address:",
+
+          // Футер
+          privacy: "Privacy Policy",
+          imprint: "Imprint",
+          contact: "Contact",
+          contactTitle: "Contact",
+          makeAwish: "Währinger Straße 169-171 4/3 1180 Vienna",
+          officeHours: "Office Hours",
+          officeHoursText: "Tuesday – Friday<br />10:00 am – 2:00 pm",
+          phoneTitle: "Phone",
+          donateNow: "DONATE NOW >",
+          becomeMember: "SUBSCRIBE TO THE NEWSLETTER >",
+          rights: "© 2025 Hilfehub.",
+        },
+      };
+
+      // Функция перевода страницы
+      function translatePage(lang) {
+        // Обновляем текст элементов с атрибутом data-i18n
+        document
+          .querySelectorAll("[data-i18n], [data-i18n-html]")
+          .forEach((element) => {
+            const key =
+              element.getAttribute("data-i18n") ||
+              element.getAttribute("data-i18n-html");
+
+            if (translations[lang][key]) {
+              if (
+                element.tagName === "INPUT" ||
+                element.tagName === "TEXTAREA"
+              ) {
+                element.placeholder = translations[lang][key];
+              } else if (element.hasAttribute("data-i18n-html")) {
+                element.innerHTML = translations[lang][key];
+              } else {
+                element.textContent = translations[lang][key];
+              }
+            }
+          });
+
+        // Обновляем кнопку языка
+        const langButton = document.getElementById("language-toggle");
+        if (langButton) {
+          langButton.querySelector("span").textContent = lang.toUpperCase();
+        }
+
+        // Сохраняем текущий язык в переменной (не используем localStorage)
+        window.currentLanguage = lang;
+      }
+
+      // Инициализация перевода при загрузке
+      document.addEventListener("DOMContentLoaded", function () {
+        const defaultLang = "de";
+        window.currentLanguage = defaultLang;
+        translatePage(defaultLang);
+
+        // Обработчик для кнопки языка
+        const langButton = document.getElementById("language-toggle");
+        if (langButton) {
+          langButton.addEventListener("click", function () {
+            const currentLang = window.currentLanguage || "de";
+            const newLang = currentLang === "de" ? "en" : "de";
+            translatePage(newLang);
+          });
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. Анимация падающих капель воды
+        function createWaterDrops() {
+          const hero = document.querySelector(".hero");
+          if (!hero) return;
+
+          const dropsCount = 15;
+
+          for (let i = 0; i < dropsCount; i++) {
+            const drop = document.createElement("div");
+            drop.classList.add("water-drop");
+            drop.style.left = `${Math.random() * 100}%`;
+            drop.style.animationDelay = `${Math.random() * 5}s`;
+            hero.appendChild(drop);
+          }
+        }
+
+        // 2. Анимация при скролле
+        function setupScrollAnimations() {
+          const animatedElements = document.querySelectorAll(
+            ".stat-card, .impact-img, h2, h3, p, .btn"
+          );
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  if (
+                    entry.target.classList.contains("stat-card") ||
+                    entry.target.classList.contains("impact-img")
+                  ) {
+                    entry.target.classList.add("visible");
+                  } else {
+                    entry.target.classList.add("animate-fadeIn");
+                  }
+                }
+              });
+            },
+            {
+              threshold: 0.1,
+            }
+          );
+
+          animatedElements.forEach((el) => {
+            observer.observe(el);
+          });
+        }
+
+        // 3. Эффект ряби для кнопок
+        function setupRippleEffect() {
+          const buttons = document.querySelectorAll(".ripple");
+
+          buttons.forEach((button) => {
+            button.addEventListener("click", function (e) {
+              const ripple = document.createElement("span");
+              ripple.classList.add("ripple-effect");
+
+              const rect = button.getBoundingClientRect();
+              const size = Math.max(rect.width, rect.height);
+              const x = e.clientX - rect.left - size / 2;
+              const y = e.clientY - rect.top - size / 2;
+
+              ripple.style.width = ripple.style.height = `${size}px`;
+              ripple.style.left = `${x}px`;
+              ripple.style.top = `${y}px`;
+
+              button.appendChild(ripple);
+
+              setTimeout(() => {
+                ripple.remove();
+              }, 600);
+            });
+          });
+        }
+
+        // 4. Анимация навигации при скролле
+        function setupNavbarAnimation() {
+          const navbar = document.querySelector(".navbar");
+          if (!navbar) return;
+
+          window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
+          });
+        }
+
+        // 5. Парящая анимация для важных элементов
+        function setupFloatingElements() {
+          const floatingElements = document.querySelectorAll(".btn-primary");
+          floatingElements.forEach((el) => {
+            el.classList.add("animate-float");
+            el.style.animationDelay = `${Math.random() * 2}s`;
+          });
+        }
+
+        // 6. Анимация при наведении на карточки
+        function setupHoverAnimations() {
+          const cards = document.querySelectorAll(".stat-card");
+          cards.forEach((card) => {
+            card.classList.add("hover-scale");
+          });
+        }
+
+        // 7. Параллакс эффект для героя
+        function setupParallax() {
+          const hero = document.querySelector(".hero");
+          if (!hero) return;
+
+          hero.classList.add("parallax");
+        }
+
+        // 8. Выбор суммы пожертвования
+        function setupDonationOptions() {
+          const donationOptions = document.querySelectorAll(".donation-option");
+          const donateBtn = document.querySelector(".btn-donate");
+
+          donationOptions.forEach((option) => {
+            option.addEventListener("click", function () {
+              // Убираем выделение у всех
+              donationOptions.forEach((opt) =>
+                opt.classList.remove("selected")
+              );
+
+              // Выделяем текущий
+              this.classList.add("selected");
+
+              // Активируем кнопку "Пожертвовать"
+              if (donateBtn) {
+                donateBtn.disabled = false;
+                donateBtn.classList.remove("opacity-70", "cursor-not-allowed");
+                donateBtn.classList.add("cursor-pointer");
+              }
+            });
+          });
+        }
+
+        // 9. Переключатель периодичности
+        function setupFrequencySelector() {
+          const frequencyBtns = document.querySelectorAll(".frequency-btn");
+
+          frequencyBtns.forEach((btn) => {
+            btn.addEventListener("click", function () {
+              frequencyBtns.forEach((b) => b.classList.remove("selected"));
+              this.classList.add("selected");
+            });
+          });
+        }
+
+        // 10. Управление мобильным меню
+        function setupMobileMenu() {
+          const mobileBtn = document.getElementById("mobile-menu-button");
+          const mobileMenu = document.getElementById("mobile-menu");
+          const iconOpen = document.getElementById("mobile-menu-icon-open");
+          const iconClose = document.getElementById("mobile-menu-icon-close");
+          const partnerBtn = document.getElementById("mobile-partner-btn");
+          const partnerMenu = document.getElementById("mobile-partner-menu");
+          const partnerIcon = document.getElementById("partner-icon");
+          const mehrBtn = document.getElementById("mobile-mehr-btn");
+          const mehrMenu = document.getElementById("mobile-mehr-menu");
+          const mehrIcon = document.getElementById("mehr-icon");
+
+          // Переключение основного меню
+          if (mobileBtn) {
+            mobileBtn.addEventListener("click", () => {
+              mobileMenu.classList.toggle("hidden");
+              mobileMenu.classList.toggle("active");
+              iconOpen.classList.toggle("hidden");
+              iconClose.classList.toggle("hidden");
+            });
+          }
+
+          // Переключение подменю Partner
+          if (partnerBtn) {
+            partnerBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              partnerMenu.classList.toggle("active");
+              partnerIcon.classList.toggle("rotate-180");
+            });
+          }
+
+          // Переключение подменю Mehr
+          if (mehrBtn) {
+            mehrBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              mehrMenu.classList.toggle("active");
+              mehrIcon.classList.toggle("rotate-180");
+            });
+          }
+
+          // Закрытие меню при клике снаружи
+          document.addEventListener("click", (e) => {
+            if (
+              !mobileMenu.contains(e.target) &&
+              !mobileBtn.contains(e.target)
+            ) {
+              mobileMenu.classList.add("hidden");
+              mobileMenu.classList.remove("active");
+              iconOpen.classList.remove("hidden");
+              iconClose.classList.add("hidden");
+
+              // Также закрываем подменю
+              partnerMenu.classList.remove("active");
+              mehrMenu.classList.remove("active");
+              partnerIcon.classList.remove("rotate-180");
+              mehrIcon.classList.remove("rotate-180");
+            }
+          });
+        }
+
+        // Инициализация всех анимаций
+        function initAnimations() {
+          createWaterDrops();
+          setupScrollAnimations();
+          setupRippleEffect();
+          setupNavbarAnimation();
+          setupFloatingElements();
+          setupHoverAnimations();
+          setupParallax();
+          setupDonationOptions();
+          setupFrequencySelector();
+          setupMobileMenu();
+
+          // Добавление задержек для анимации
+          document.querySelectorAll("h2").forEach((el, i) => {
+            el.classList.add(`animate-delay-${(i + 1) * 100}`);
+          });
+        }
+
+        // Запуск при полной загрузке страницы
+        window.addEventListener("load", initAnimations);
+      });
+    </script>
+  </body>
+</html>
