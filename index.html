@@ -1744,19 +1744,39 @@
         const acceptBtn = document.getElementById("cookie-accept");
         const learnMore = document.getElementById("learn-more-link");
 
-        // Показать баннер, если еще не принято
-        if (!localStorage.getItem("cookiesAccepted")) {
+        // Проверяем, поддерживается ли localStorage
+        const isLocalStorageSupported = () => {
+          try {
+            const test = "test";
+            localStorage.setItem(test, test);
+            localStorage.removeItem(test);
+            return true;
+          } catch (e) {
+            return false;
+          }
+        };
+
+        // Показать баннер, если еще не принято и поддерживается localStorage
+        if (
+          isLocalStorageSupported() &&
+          !localStorage.getItem("cookiesAccepted")
+        ) {
+          banner.style.display = "flex";
+        } else if (!isLocalStorageSupported()) {
+          // Если localStorage не поддерживается, показываем баннер всегда
           banner.style.display = "flex";
         }
 
         acceptBtn.addEventListener("click", () => {
           banner.style.display = "none";
-          localStorage.setItem("cookiesAccepted", "true");
+          if (isLocalStorageSupported()) {
+            localStorage.setItem("cookiesAccepted", "true");
+          }
         });
 
-        // сюда вставь свою ссылку
         learnMore.href = "privacy-policy.html";
       });
     </script>
   </body>
 </html>
+
