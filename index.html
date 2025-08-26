@@ -1737,41 +1737,18 @@
         Verstanden!
       </button>
     </div>
-
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const banner = document.getElementById("cookie-banner");
         const acceptBtn = document.getElementById("cookie-accept");
         const learnMore = document.getElementById("learn-more-link");
 
-        // Проверяем, поддерживается ли localStorage
-        const isLocalStorageSupported = () => {
-          try {
-            const test = "test";
-            localStorage.setItem(test, test);
-            localStorage.removeItem(test);
-            return true;
-          } catch (e) {
-            return false;
-          }
-        };
-
-        // Показать баннер, если еще не принято и поддерживается localStorage
-        if (
-          isLocalStorageSupported() &&
-          !localStorage.getItem("cookiesAccepted")
-        ) {
-          banner.style.display = "flex";
-        } else if (!isLocalStorageSupported()) {
-          // Если localStorage не поддерживается, показываем баннер всегда
-          banner.style.display = "flex";
-        }
+        // Всегда показываем баннер при загрузке страницы
+        banner.style.display = "flex";
 
         acceptBtn.addEventListener("click", () => {
+          // Просто скрываем баннер без сохранения в localStorage
           banner.style.display = "none";
-          if (isLocalStorageSupported()) {
-            localStorage.setItem("cookiesAccepted", "true");
-          }
         });
 
         learnMore.href = "privacy-policy.html";
@@ -1779,4 +1756,5 @@
     </script>
   </body>
 </html>
+
 
