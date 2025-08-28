@@ -1,0 +1,407 @@
+    /* Основные анимации */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-15px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes ripple {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+
+    @keyframes waterDrop {
+        0% {
+            transform: translateY(-20px) scale(0.5);
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 1;
+        }
+
+        90% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(100vh) scale(1.2);
+            opacity: 0;
+        }
+    }
+
+    /* Анимации для контента */
+    .animate-fadeIn {
+        animation: fadeIn 1s ease-out forwards;
+    }
+
+    .animate-float {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    /* Эффекты при наведении */
+    .hover-scale {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-scale:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Эффект ряби для кнопок */
+    .ripple {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ripple-effect {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        transform: scale(0);
+        animation: ripple 0.6s linear;
+        pointer-events: none;
+    }
+
+    /* Анимация навигации при скролле */
+    .navbar {
+        transition: all 0.4s ease;
+    }
+
+    /* Фон для героя с эффектом воды */
+    .water-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+        z-index: 1;
+    }
+
+    /* Эффект параллакса */
+    .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* Дополнительные стили для анимаций */
+    .stat-card,
+    .impact-img {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .stat-card.visible,
+    .impact-img.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Основной фон */
+    body {
+        background: linear-gradient(to bottom, #f4ecd9 0%, #f1e6d6 100%);
+    }
+
+    /* Стили для формы пожертвований */
+    .donation-form {
+        background-color: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+    }
+
+    .donation-option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #cbd5e1;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #0891b2;
+        width: 100%;
+        height: 50px;
+        /* прямоугольник */
+    }
+
+
+    .donation-option:hover {
+        border-color: #0891b2;
+        background-color: #f0fdfa;
+    }
+
+    .donation-option.selected {
+        background-color: #06b6d4;
+        color: white;
+        border-color: #06b6d4;
+        box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
+    }
+
+    .frequency-selector {
+        display: flex;
+        gap: 0;
+        margin-bottom: 24px;
+    }
+
+    .oneTimeButton {
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+
+    .monthlyButton {
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+
+
+    .frequency-btn {
+        width: 2000px;
+        padding: 7px;
+        border: 2px solid #cbd5e1;
+        background: white;
+        cursor: pointer;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .frequency-btn.selected {
+        background-color: #06b6d4;
+        color: white;
+        border-color: #06b6d4;
+    }
+
+    .object-contain {
+        width: 135px;
+        height: 1000px;
+    }
+
+    /* Стили для мобильного меню */
+    #mobile-menu {
+        position: sticky;
+        /* вместо absolute */
+        top: 64px;
+        /* высота шапки navbar */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    #mobile-menu.active {
+        max-height: 1000px;
+    }
+
+    .rotate-180 {
+        transform: rotate(180deg);
+    }
+
+    #mobile-menu a,
+    #mobile-menu>div {
+        padding: 12px 15px;
+        border-radius: 6px;
+        transition: background-color 0.2s;
+    }
+
+    #mobile-menu a:hover,
+    #mobile-menu>div:hover {
+        background-color: #f0fdfa;
+    }
+
+    #mobile-partner-menu,
+    #mobile-mehr-menu {
+        padding-left: 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    #mobile-partner-menu.active,
+    #mobile-mehr-menu.active {
+        max-height: 500px;
+    }
+
+    #mobile-partner-menu a,
+    #mobile-mehr-menu a {
+        padding: 8px 15px;
+        font-size: 0.95rem;
+        display: block;
+    }
+
+    #partner-icon,
+    #mehr-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-menu-item {
+        border-bottom: 1px solid #f0f0f0;
+        padding: 12px 0;
+    }
+
+    .hero {
+        position: relative;
+        min-height: 40vh;
+        overflow: hidden;
+    }
+
+    .hero img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        image-rendering: -webkit-optimize-contrast;
+        /* убирает размытость на iOS */
+    }
+
+    @supports (-webkit-touch-callout: none) {
+        .hero img {
+            transform: translateZ(0);
+            /* чётче на iPhone */
+        }
+    }
+
+    .btn-green {
+        background-color: #28a745 !important;
+
+    }
+
+    .bg-gray-900 {
+        background-color: #A0EBA7 !important;
+    }
+
+    .h1Color {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(90deg, #c08a2e, #e6c882, #c08a2e);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .bgFirstButtom {
+        background-color: #f8c600;
+    }
+
+    .bg-gradient-to-r {
+        background-color: white;
+    }
+
+    .andererBetrag {
+        font-size: 16.5px;
+    }
+
+    @media (max-width: 768px) {
+        .team-img-container {
+            height: 575px;
+        }
+
+        .team-name {
+            font-size: 1.5rem;
+        }
+
+        .team-role {
+            font-size: 1.1rem;
+        }
+
+        .team-bio {
+            font-size: 1rem;
+        }
+    }
+
+    .cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(72, 209, 204, 0.7);
+        color: white;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        z-index: 1000;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .cookie-banner p {
+        margin: 0;
+        flex: 1;
+    }
+
+    .cookie-banner .learn-more {
+        color: white;
+        font-weight: bold;
+        text-decoration: underline;
+        margin-left: 6px;
+    }
+
+    .cookie-btn {
+        background: #4fd1c5;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    .cookie-btn:hover {
+        background: #38b2ac;
+    }
+
+    @media (max-width: 768px) {
+        .cookie-banner {
+            flex-direction: column;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .cookie-banner p {
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .cookie-btn {
+            margin-left: 0;
+            margin-top: 8px;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .learn-more {
+            display: block;
+            margin-top: 6px;
+        }
+    }

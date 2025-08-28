@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hilfehub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <nav
+      class="navbar sticky top-0 w-full backdrop-blur-md z-50 border-b border-gray-100 shadow-sm"
+      style="background-color: white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Лого -->
+          <!-- Название крупным планом -->
+          <div class="flex flex-col items-center">
+            <img
+              src="processed_image (1).png"
+              alt="Icon"
+              class="h-12 w-12 -translate-x-1 translate-y-1"
+            />
+            <span class="text-xl font-extrabold h1Color mb-2">Hilfehub</span>
+          </div>
+
+          <!-- Десктоп навигация -->
+          <div
+            class="hidden md:flex items-center space-x-6 relative"
+            id="desktop-menu"
+          >
+            <a
+              href="index.html"
+              data-i18n="navStartseite"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Startseite</a
+            >
+            <a
+              href="about.html"
+              data-i18n="navAbout"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Über uns</a
+            >
+            <a
+              href="index.html#donatenow"
+              data-i18n="navMember"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Mitglied werden</a
+            >
+
+            <!-- Partner dropdown -->
+            <div class="relative group">
+              <button
+                data-i18n="navPartners"
+                class="text-gray-800 hover:text-cyan-500 transition-colors font-medium flex items-center"
+              >
+                Partner
+                <svg
+                  class="w-4 h-4 ml-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 mt-2 w-56 z-10"
+              >
+                <a
+                  href="#partnerhotels"
+                  data-i18n="navPartnerHotels"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Partnerhotels</a
+                >
+                <a
+                  href="#partnerorgs"
+                  data-i18n="navPartnerOrgs"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Partnerorganisationen</a
+                >
+              </div>
+            </div>
+
+            <a
+              href="#vacation"
+              data-i18n="navVacation"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Unsere Projekte</a
+            >
+
+            <!-- Mehr dropdown -->
+            <div class="relative group">
+              <button
+                data-i18n="navMore"
+                class="text-gray-800 hover:text-cyan-500 transition-colors font-medium flex items-center"
+              >
+                Nachrichten
+                <svg
+                  class="w-4 h-4 ml-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 mt-2 w-56 z-10"
+              >
+                <a
+                  href="#aktuelles"
+                  data-i18n="navAktuelles"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Aktuelles</a
+                >
+                <a
+                  href="#presse"
+                  data-i18n="navPresse"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Presse</a
+                >
+                <a
+                  href="#gutschein"
+                  data-i18n="navGutschein"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >2for1 Gutschein</a
+                >
+                <a
+                  href="#termine"
+                  data-i18n="navTermine"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Termine</a
+                >
+                <a
+                  href="#onesong"
+                  data-i18n="navOneSong"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >One Song, one family</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Кнопка мобильного меню и переключатель языка -->
+          <div class="flex items-center gap-4">
+            <!-- Кнопка мобильного меню -->
+            <button
+              id="mobile-menu-button"
+              class="md:hidden text-gray-800 focus:outline-none"
+            >
+              <svg
+                id="mobile-menu-icon-open"
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+              <svg
+                id="mobile-menu-icon-close"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <!-- Переключатель языка -->
+            <button
+              id="language-toggle"
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium h-9 rounded-md px-3 bg-gray border border-white text-gray-700 bg-yellow hover:bg-gray-50"
+            >
+              <svg
+                class="lucide lucide-languages w-4 h-4 mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="m5 8 6 6" />
+                <path d="m4 14 6-6 2-3" />
+                <path d="M2 5h12" />
+                <path d="M7 2h1" />
+                <path d="m22 22-5-10-5 10" />
+                <path d="M14 18h6" />
+              </svg>
+              <span>DE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Мобильное меню -->
+    <div
+      id="mobile-menu"
+      class="md:hidden hidden flex-col space-y-2 text-left w-full bg-white px-4 py-2 absolute top-16 left-0 shadow-lg z-40"
+    >
+      <a
+        href="index.html"
+        data-i18n="navStartseite"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Startseite</a
+      >
+      <a
+        href="about.html"
+        data-i18n="navAbout"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Über uns</a
+      >
+      <a
+        href="index.html#donatenow"
+        data-i18n="navMember"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Mitglied werden</a
+      >
+
+      <!-- Partner -->
+      <div class="py-3 mobile-menu-item">
+        <button
+          id="mobile-partner-btn"
+          data-i18n="navPartners"
+          class="w-full text-left text-gray-800 font-medium flex items-center justify-between"
+        >
+          Partner
+        </button>
+      </div>
+
+      <a
+        href="#vacation"
+        data-i18n="navVacation"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Unsere Projekte</a
+      >
+
+      <!-- Mehr -->
+      <div class="py-3 mobile-menu-item">
+        <button
+          id="mobile-mehr-btn"
+          data-i18n="navMore"
+          class="w-full text-left text-gray-800 font-medium flex items-center justify-between"
+        >
+          Nachrichten
+        </button>
+      </div>
+    </div>
+
+    <section
+      class="hero min-h-screen flex items-center justify-center relative"
+    >
+      <!-- Retina поддержка для iPhone -->
+      <picture>
+        <source
+          srcset="64807a998_image@2x.png"
+          media="(min-device-pixel-ratio: 2)"
+        />
+        <img
+          src="Starving children.avif"
+          alt="Hintergrundbild"
+          class="absolute inset-0 w-full h-full object-cover parallax-img"
+        />
+      </picture>
+
+      <div class="water-bg"></div>
+      <div class="max-w-7xl mx-auto relative z-10 px-4">
+        <div class="text-center py-20">
+          <h1
+            class="text-5xl md:text-7xl font-bold mb-6 text-white animate-fadeIn"
+            data-i18n="heroTitle"
+            data-i18n-html
+          >
+            Geben Sie Kindern <br />
+            eine Zukunft
+          </h1>
+          <p
+            class="text-xl md:text-2xl text-white mb-4 font-medium animate-fadeIn"
+            style="animation-delay: 0.2s"
+            data-i18n="heroSubtitle"
+          >
+            Kein Kind sollte hungern, leiden oder seine Kindheit verlieren
+          </p>
+          <p
+            class="text-lg text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed animate-fadeIn"
+            style="animation-delay: 0.4s"
+            data-i18n="heroText"
+          >
+            Jeden Tag kämpfen Millionen Kinder ums Überleben. Ihre Spende
+            bedeutet Schutz, Nahrung und Hoffnung.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn"
+            style="animation-delay: 0.6s"
+          >
+            <a
+              href="index.html#donatenow"
+              class="ripple inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-11 rounded-md bgFirstButtom hover:bg-cyan-600 px-8 py-4 text-lg shadow-2xl"
+              data-i18n="helpNow"
+            >
+              Jetzt helfen
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-right w-5 h-5 ml-2"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+            <a
+              href="about.html"
+              class="btn-green ripple inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-11 rounded-md text-white hover:bg-white/10 px-8 py-4 text-lg"
+              data-i18n="learnMore"
+            >
+              Mehr erfahren
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-main">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-6 text-black"
+            data-i18n="crisisTitle"
+          >
+            Die harte Realität
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div
+            class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-users w-12 h-12 mx-auto mb-4 text-red-500"
+            >
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <div class="text-4xl md:text-5xl font-bold mb-4 text-red-500">
+              771 Millionen
+            </div>
+            <p class="text-lg text-gray-700" data-i18n="stat1">
+              Kinder wachen hungrig auf
+            </p>
+          </div>
+
+          <div
+            class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-globe w-12 h-12 mx-auto mb-4 text-orange-500"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+            <div class="text-4xl md:text-5xl font-bold mb-4 text-orange-500">
+              1 von 10
+            </div>
+            <p class="text-lg text-gray-700" data-i18n="stat2">
+              haben keine Möglichkeit zu lernen
+            </p>
+          </div>
+
+          <div
+            class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-clock w-12 h-12 mx-auto mb-4 text-yellow-500"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <div class="text-4xl md:text-5xl font-bold mb-4 text-yellow-500">
+              2 Stunden täglich
+            </div>
+            <p class="text-lg text-gray-700" data-i18n="stat3">
+              sind gezwungen zu arbeiten
+            </p>
+          </div>
+
+          <div
+            class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-baby w-12 h-12 mx-auto mb-4 text-red-600"
+            >
+              <path d="M9 12h.01"></path>
+              <path d="M15 12h.01"></path>
+              <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"></path>
+              <path
+                d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"
+              ></path>
+            </svg>
+            <div class="text-4xl md:text-5xl font-bold mb-4 text-red-600">
+              1.000 Kinder
+            </div>
+            <p class="text-lg text-gray-700" data-i18n="stat4">
+              verlieren täglich ihr Leben durch vermeidbare Ursachen
+            </p>
+          </div>
+
+          <div
+            class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-shield w-12 h-12 mx-auto mb-4 text-purple-500"
+            >
+              <path
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+              ></path>
+            </svg>
+            <div class="text-4xl md:text-5xl font-bold mb-4 text-purple-500">
+              50% der Krankenhäuser
+            </div>
+            <p class="text-lg text-gray-700" data-i18n="stat5">
+              brauchen dringend medizinische Hilfe
+            </p>
+          </div>
+
+          <div
+            class="stat-card text-center p-6 rounded-2xl bg-white hover:bg-gray-100 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-triangle-alert w-12 h-12 mx-auto mb-4 text-red-700"
+            >
+              <path
+                d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"
+              ></path>
+              <path d="M12 9v4"></path>
+              <path d="M12 17h.01"></path>
+            </svg>
+            <div class="text-4xl md:text-5xl font-bold mb-4 text-red-700">
+              297.000 Kinder
+            </div>
+            <p class="text-lg text-gray-700" data-i18n="stat6">
+              leben in Angst vor Gewalt und Ausbeutung
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-main">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-6 text-black"
+            data-i18n="impactTitle"
+          >
+            Ihre Hilfe verändert Schicksale
+          </h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div class="impact-img">
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="hungry-child.jpg"
+                alt="Kind in Not"
+                class="w-full h-96 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact1">
+              Ein Teller Essen
+            </h3>
+            <p
+              class="text-lg text-gray-700 leading-relaxed"
+              data-i18n="impact1Text"
+            >
+              Für ein Kind bedeutet Ihre Spende nicht nur Nahrung, sondern neue
+              Lebenskraft und Hoffnung.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact2">
+              Eine Chance auf Schule
+            </h3>
+            <p
+              class="text-lg text-gray-700 leading-relaxed"
+              data-i18n="impact2Text"
+            >
+              Bildung ist der Schlüssel. Ihre Unterstützung öffnet Kindern Türen
+              zu einer besseren Zukunft.
+            </p>
+          </div>
+          <div class="impact-img">
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="Education for children.avif"
+                alt="Schulbildung für Kinder"
+                class="w-full h-96 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div class="impact-img">
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="Two girls standing and reading.jpg"
+                alt="Schutz für Kinder"
+                class="w-full h-96 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact3">
+              Schutz statt Angst
+            </h3>
+            <p
+              class="text-lg text-gray-700 leading-relaxed"
+              data-i18n="impact3Text"
+            >
+              Ihre Hilfe bewahrt Kinder vor Gewalt, Ausbeutung und einem Leben
+              auf der Straße.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact4">
+              Gesundheit schenken
+            </h3>
+            <p
+              class="text-lg text-gray-700 leading-relaxed"
+              data-i18n="impact4Text"
+            >
+              Viele Krankheiten sind heilbar – wenn Medikamente und Ärzte
+              erreichbar sind.
+            </p>
+          </div>
+          <div class="impact-img">
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="Girl and doctor sitting next to each over.jpg"
+                alt="Medizinische Hilfe für Kinder"
+                class="w-full h-96 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div class="impact-img">
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="laughing children.jpg"
+                alt="Kinder lachen und spielen"
+                class="w-full h-96 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact5">
+              Kindheit zurückgeben
+            </h3>
+            <p
+              class="text-lg text-gray-700 leading-relaxed"
+              data-i18n="impact5Text"
+            >
+              Mit Ihrer Unterstützung können Kinder wieder spielen, lachen und
+              träumen.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-black" data-i18n="impact6">
+              Ein Leben voller Hoffnung
+            </h3>
+            <p
+              class="text-lg text-gray-700 leading-relaxed"
+              data-i18n="impact6Text"
+            >
+              Jede Spende schenkt nicht nur Hilfe, sondern ein Versprechen: Du
+              bist nicht allein.
+            </p>
+          </div>
+          <div class="impact-img">
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/7cfffcf8e_image.png"
+                alt="Hoffnungsvolle Zukunft für Kinder"
+                class="w-full h-96 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r relative overflow-hidden"
+    >
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2
+          class="text-4xl md:text-5xl font-bold mb-8 animate-fadeIn"
+          data-i18n="donationTitle"
+        >
+          Ihre Spende bewirkt Wunder
+        </h2>
+        <p
+          class="text-xl leading-relaxed animate-fadeIn"
+          style="animation-delay: 0.2s"
+          data-i18n="donationText"
+        >
+          Mit Ihrer Hilfe bauen wir Brunnen, installieren Wassersysteme und
+          schaffen nachhaltigen Zugang zu sauberem Wasser.
+        </p>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8" id="donatenow">
+      <div class="max-w-4xl mx-auto">
+        <div class="donation-form">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-8 text-center"
+            data-i18n="formTitle"
+          >
+            Jetzt spenden
+          </h2>
+
+          <p
+            class="block text-gray-700 mb-3 text-center"
+            data-i18n="ihreUnterstützung"
+            data-i18n-html
+          >
+            Ihre Unterstützung hilft uns, <br />
+            Herzenswünsche schwer kranker Kinder <br />
+            wahr werden zu lassen.
+          </p>
+
+          <div class="mb-8">
+            <label
+              class="block text-gray-700 font-medium mb-3 text-center"
+              data-i18n="donationAmount"
+              >Spendenbetrag</label
+            >
+
+            <!-- Переключатель периодичности -->
+            <div class="frequency-selector mb-6">
+              <div
+                class="frequency-btn oneTimeButton selected"
+                data-frequency="once"
+                data-i18n="oneTime"
+              >
+                Einmalig
+              </div>
+              <div
+                class="frequency-btn monthlyButton"
+                data-frequency="monthly"
+                data-i18n="monthly"
+              >
+                Monatlich
+              </div>
+            </div>
+
+            <!-- Суммы -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+              <div class="donation-option" data-amount="10">€10</div>
+              <div class="donation-option" data-amount="25">€25</div>
+              <div class="donation-option" data-amount="50">€50</div>
+              <div class="donation-option" data-amount="100">€100</div>
+              <div class="donation-option" data-amount="125">€125</div>
+              <div class="donation-option" data-amount="other">
+                <input
+                  type="number"
+                  placeholder="Anderer Betrag"
+                  data-i18n="otherAmount"
+                  class="w-full andererBetrag text-center bg-transparent border-none focus:outline-none"
+                  min="1"
+                />
+              </div>
+            </div>
+
+            <!-- Ошибки -->
+            <div id="card-errors" class="text-red-500 mb-4 text-center"></div>
+
+            <!-- Кнопка -->
+            <div class="text-center">
+              <div class="flex items-center justify-center mb-6">
+                <input
+                  type="checkbox"
+                  id="privacy-check"
+                  class="mr-2 h-4 w-4 text-cyan-600 border-gray-300 rounded"
+                  required
+                />
+                <label
+                  for="privacy-check"
+                  class="text-gray-700 text-sm"
+                  data-i18n="privacyAgreement"
+                  data-i18n-html
+                >
+                  Ich habe die
+                  <a
+                    href="privacy-policy.html"
+                    target="_blank"
+                    class="text-cyan-600 underline"
+                    data-i18n="privacyPolicyLink"
+                    data-i18n-html
+                    >Datenschutzerklärung</a
+                  >
+                  gelesen und stimme zu.*
+                </label>
+              </div>
+
+              <button
+                id="donate-btn"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-14 rounded-md bg-cyan-500 hover:bg-cyan-600 text-white px-10 py-4 text-lg shadow-2xl transition-all opacity-70 cursor-not-allowed"
+                disabled
+                data-i18n="continue"
+              >
+                Spenden Sie jetzt
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-right w-5 h-5"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8 light-green-bg">
+      <div class="max-w-4xl mx-auto">
+        <div class="donation-form">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-8 text-center"
+            data-i18n="sendDataTitle"
+          >
+            Mitglied werden
+          </h2>
+          <p
+            class="block text-gray-700 mb-3 text-center"
+            data-i18n="willYouReceive"
+          >
+            Erhalten Sie zuerst neue Updates
+          </p>
+
+          <div class="mb-8">
+            <label
+              class="block text-gray-700 font-medium mb-3 text-center"
+              data-i18n="personalData"
+              >Persönliche Daten</label
+            >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <input
+                type="text"
+                placeholder="Vorname"
+                data-i18n="firstName"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg"
+              />
+              <input
+                type="text"
+                placeholder="Nachname"
+                data-i18n="lastName"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg"
+              />
+            </div>
+            <input
+              type="email"
+              placeholder="E-Mail"
+              data-i18n="email"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4"
+            />
+            <input
+              type="date"
+              placeholder="Geburtsdatum"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4"
+            />
+          </div>
+
+          <div class="text-center">
+            <div class="flex items-center justify-center mb-6">
+              <input
+                type="checkbox"
+                id="privacy-check"
+                class="mr-2 h-4 w-4 text-cyan-600 border-gray-300 rounded"
+                required
+              />
+              <label
+                for="privacy-check"
+                class="text-gray-700 text-sm"
+                data-i18n="privacyAgreement"
+                data-i18n-html
+              >
+                Ich habe die
+                <a
+                  href="privacy-policy.html"
+                  target="_blank"
+                  class="text-cyan-600 underline"
+                  data-i18n="privacyPolicyLink"
+                  data-i18n-html
+                  >Datenschutzerklärung</a
+                >
+                gelesen und stimme zu.*
+              </label>
+            </div>
+            <button
+              id="send-btn"
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-14 rounded-md bg-cyan-500 hover:bg-cyan-600 text-white px-10 py-4 text-lg shadow-2xl"
+              disabled
+              data-i18n="sendButton"
+            >
+              Jetzt beitreten
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-cyan-500 text-white py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <!-- Обновленный блок с иконкой и текстом вместо логотипа -->
+          <div class="flex flex-col items-center mb-4 md:mb-0">
+            <div class="mb-2">
+              <img src="processed_image (1).png" alt="Icon" class="h-20 w-20" />
+            </div>
+            <span class="text-3xl font-extrabold h1Color">Hilfehub</span>
+          </div>
+
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="hover:text-cyan-400 transition-colors"
+              data-i18n="privacy"
+              >Datenschutz</a
+            >
+            <a
+              href="#"
+              class="hover:text-cyan-400 transition-colors"
+              data-i18n="imprint"
+              >Impressum</a
+            >
+            <a
+              href="#"
+              class="hover:text-cyan-400 transition-colors"
+              data-i18n="contact"
+              >Kontakt</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+        >
+          <div>
+            <h3 class="text-2xl font-bold mb-4" data-i18n="contactTitle">
+              Kontakt
+            </h3>
+            <p class="mb-4" data-i18n="makeAwish">
+              Währinger Straße 169-171 4/3 1180 Wien
+            </p>
+
+            <h4 class="text-xl font-semibold mt-6 mb-2" data-i18n="officeHours">
+              Bürozeiten
+            </h4>
+            <p data-i18n="officeHoursText">
+              Dienstag – Freitag<br />10:00 Uhr – 14:00 Uhr
+            </p>
+
+            <h4 class="text-xl font-semibold mt-6 mb-2" data-i18n="phoneTitle">
+              Telefon
+            </h4>
+            <p>+43 670 7018780</p>
+            <p>hilfehubwien@gmail.com</p>
+
+            <div class="mt-6 flex items-center space-x-4">
+              <a
+                href="https://www.facebook.com/share/16d6mYTzJt/?mibextid=wwXIfr"
+                target="_blank"
+                class="text-white hover:text-cyan-200 transition-colors"
+              >
+                <i class="fab fa-facebook-f text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="text-white hover:text-cyan-200 transition-colors"
+              >
+                <i class="fab fa-instagram text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="text-white hover:text-cyan-200 transition-colors"
+              >
+                <i class="fab fa-tiktok text-2xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- <div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="bankTransfer">Banküberweisung</h3>
+                    <p data-i18n="bankDetails">Erste Bank:<br>
+                        IBAN: AT52 2011 1404 1027 7701<br>
+                        BIC: GIBAATWWXXX</p>
+                </div> -->
+        </div>
+
+        <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-12 rounded-md bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 shadow-lg transition-all"
+            data-i18n="donateNow"
+          >
+            JETZT SPENDEN >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-12 rounded-md bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 shadow-lg transition-all"
+            data-i18n="becomeMember"
+          >
+            ZUM NEWSLSETTER ANMELDEN >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="mt-8 pt-8 text-center border-t border-white/20">
+          <p data-i18n="rights">© 2025 Hilfehub.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. Анимация падающих капель воды
+        function createWaterDrops() {
+          const hero = document.querySelector(".hero");
+          if (!hero) return;
+
+          const dropsCount = 15;
+
+          for (let i = 0; i < dropsCount; i++) {
+            const drop = document.createElement("div");
+            drop.classList.add("water-drop");
+            drop.style.left = `${Math.random() * 100}%`;
+            drop.style.animationDelay = `${Math.random() * 5}s`;
+            hero.appendChild(drop);
+          }
+        }
+
+        // 2. Анимация при скролле
+        function setupScrollAnimations() {
+          const animatedElements = document.querySelectorAll(
+            ".stat-card, .impact-img, h2, h3, p, .btn"
+          );
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  if (
+                    entry.target.classList.contains("stat-card") ||
+                    entry.target.classList.contains("impact-img")
+                  ) {
+                    entry.target.classList.add("visible");
+                  } else {
+                    entry.target.classList.add("animate-fadeIn");
+                  }
+                }
+              });
+            },
+            {
+              threshold: 0.1,
+            }
+          );
+
+          animatedElements.forEach((el) => {
+            observer.observe(el);
+          });
+        }
+
+        // 3. Эффект ряби для кнопок
+        function setupRippleEffect() {
+          const buttons = document.querySelectorAll(".ripple");
+
+          buttons.forEach((button) => {
+            button.addEventListener("click", function (e) {
+              const ripple = document.createElement("span");
+              ripple.classList.add("ripple-effect");
+
+              const rect = button.getBoundingClientRect();
+              const size = Math.max(rect.width, rect.height);
+              const x = e.clientX - rect.left - size / 2;
+              const y = e.clientY - rect.top - size / 2;
+
+              ripple.style.width = ripple.style.height = `${size}px`;
+              ripple.style.left = `${x}px`;
+              ripple.style.top = `${y}px`;
+
+              button.appendChild(ripple);
+
+              setTimeout(() => {
+                ripple.remove();
+              }, 600);
+            });
+          });
+        }
+
+        // 4. Анимация навигации при скролле
+        function setupNavbarAnimation() {
+          const navbar = document.querySelector(".navbar");
+          if (!navbar) return;
+
+          window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
+          });
+        }
+
+        // 5. Парящая анимация для важных элементов
+        function setupFloatingElements() {
+          const floatingElements = document.querySelectorAll(".btn-primary");
+          floatingElements.forEach((el) => {
+            el.classList.add("animate-float");
+            el.style.animationDelay = `${Math.random() * 2}s`;
+          });
+        }
+
+        // 6. Анимация при наведении на карточки
+        function setupHoverAnimations() {
+          const cards = document.querySelectorAll(".stat-card");
+          cards.forEach((card) => {
+            card.classList.add("hover-scale");
+          });
+        }
+
+        // 7. Параллакс эффект для героя
+        function setupParallax() {
+          const hero = document.querySelector(".hero");
+          if (!hero) return;
+
+          hero.classList.add("parallax");
+        }
+
+        // 8. Выбор суммы пожертвования
+        function setupDonationOptions() {
+          const donationOptions = document.querySelectorAll(".donation-option");
+          const donateBtn = document.querySelector(".btn-donate");
+
+          donationOptions.forEach((option) => {
+            option.addEventListener("click", function () {
+              // Убираем выделение у всех
+              donationOptions.forEach((opt) =>
+                opt.classList.remove("selected")
+              );
+
+              // Выделяем текущий
+              this.classList.add("selected");
+
+              // Активируем кнопку "Пожертвовать"
+              if (donateBtn) {
+                donateBtn.disabled = false;
+                donateBtn.classList.remove("opacity-70", "cursor-not-allowed");
+                donateBtn.classList.add("cursor-pointer");
+              }
+            });
+          });
+        }
+
+        // 9. Переключатель периодичности
+        function setupFrequencySelector() {
+          const frequencyBtns = document.querySelectorAll(".frequency-btn");
+
+          frequencyBtns.forEach((btn) => {
+            btn.addEventListener("click", function () {
+              frequencyBtns.forEach((b) => b.classList.remove("selected"));
+              this.classList.add("selected");
+            });
+          });
+        }
+
+        // 10. Управление мобильным меню
+        function setupMobileMenu() {
+          const mobileBtn = document.getElementById("mobile-menu-button");
+          const mobileMenu = document.getElementById("mobile-menu");
+          const iconOpen = document.getElementById("mobile-menu-icon-open");
+          const iconClose = document.getElementById("mobile-menu-icon-close");
+          const partnerBtn = document.getElementById("mobile-partner-btn");
+          const partnerMenu = document.getElementById("mobile-partner-menu");
+          const partnerIcon = document.getElementById("partner-icon");
+          const mehrBtn = document.getElementById("mobile-mehr-btn");
+          const mehrMenu = document.getElementById("mobile-mehr-menu");
+          const mehrIcon = document.getElementById("mehr-icon");
+
+          // Переключение основного меню
+          if (mobileBtn) {
+            mobileBtn.addEventListener("click", () => {
+              mobileMenu.classList.toggle("hidden");
+              mobileMenu.classList.toggle("active");
+              iconOpen.classList.toggle("hidden");
+              iconClose.classList.toggle("hidden");
+            });
+          }
+
+          // Переключение подменю Partner
+          if (partnerBtn) {
+            partnerBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              partnerMenu.classList.toggle("active");
+              partnerIcon.classList.toggle("rotate-180");
+            });
+          }
+
+          // Переключение подменю Mehr
+          if (mehrBtn) {
+            mehrBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              mehrMenu.classList.toggle("active");
+              mehrIcon.classList.toggle("rotate-180");
+            });
+          }
+
+          // Закрытие меню при клике снаружи
+          document.addEventListener("click", (e) => {
+            if (
+              !mobileMenu.contains(e.target) &&
+              !mobileBtn.contains(e.target)
+            ) {
+              mobileMenu.classList.add("hidden");
+              mobileMenu.classList.remove("active");
+              iconOpen.classList.remove("hidden");
+              iconClose.classList.add("hidden");
+
+              // Также закрываем подменю
+              partnerMenu.classList.remove("active");
+              mehrMenu.classList.remove("active");
+              partnerIcon.classList.remove("rotate-180");
+              mehrIcon.classList.remove("rotate-180");
+            }
+          });
+        }
+
+        // Инициализация всех анимаций
+        function initAnimations() {
+          createWaterDrops();
+          setupScrollAnimations();
+          setupRippleEffect();
+          setupNavbarAnimation();
+          setupFloatingElements();
+          setupHoverAnimations();
+          setupParallax();
+          setupDonationOptions();
+          setupFrequencySelector();
+          setupMobileMenu();
+
+          // Добавление задержек для анимации
+          document.querySelectorAll("h2").forEach((el, i) => {
+            el.classList.add(`animate-delay-${(i + 1) * 100}`);
+          });
+        }
+
+        // Запуск при полной загрузке страницы
+        window.addEventListener("load", initAnimations);
+      });
+    </script>
+
+    <script>
+      // Объект с переводами
+      const translations = {
+        de: {
+          // Навигация
+          about: "Über uns",
+          member: "Mitglied werden",
+          partners: "Partner",
+          vacation: "Urlaub beantragen",
+          sendDataTitle: "Mitglied werden",
+          followUs: "Folge uns",
+          willYouReceive: "Erhalten Sie zuerst neue Updates",
+          contactTitle: "Kontakt",
+          makeAwish: "Währinger Straße 169-171 4/3 1180 Wien",
+          navStartseite: "Startseite",
+          ihreUnterstützung:
+            "Ihre Unterstützung hilft uns, <br /> Herzenswünsche schwer kranker Kinder <br /> wahr werden zu lassen",
+          cookiesMessage:
+            "Wir verwenden Cookies, um sicherzustellen, dass wir Ihnen das beste Erlebnis auf unserer Website bieten.",
+          learnMore: "Mehr erfahren",
+          gotIt: "Verstanden!",
+
+          officeHours: "Bürozeiten",
+          officeHoursText: "Dienstag – Freitag 10:00 Uhr – 14:00 Uhr",
+          phoneTitle: "Telefon",
+          bankTransfer: "Banküberweisung",
+          bankDetails:
+            "Erste Bank: IBAN: AT52 2011 1404 1027 7701 BIC: GIBAATWWXXX",
+          donateNow: "JETZT SPENDEN >",
+          becomeMember: "ZUM NEWSLETTER ANMELDEN >",
+
+          // Навигация (нижняя)
+          navAbout: "Über uns",
+          navMember: "Mitglied werden",
+          navPartners: "Partner",
+          navPartnerHotels: "Partnerhotels",
+          navPartnerOrgs: "Partnerorganisationen",
+          navVacation: "Unsere Projekte",
+          navMore: "Nachrichten",
+          navAktuelles: "Aktuelles",
+          navPresse: "Presse",
+          navGutschein: "2for1 Gutschein",
+          navTermine: "Termine",
+
+          // Герой
+          heroTitle: "Geben Sie Kindern <br> eine Zukunft",
+          heroSubtitle:
+            "Kein Kind sollte hungern, leiden oder seine Kindheit verlieren",
+          heroText:
+            "Jeden Tag kämpfen Millionen Kinder ums Überleben. Ihre Spende bedeutet Schutz, Nahrung und Hoffnung.",
+          helpNow: "Jetzt helfen",
+          learnMore: "Mehr erfahren",
+
+          // Статистика
+          crisisTitle: "Die harte Realität",
+          stat1: "Kinder wachen hungrig auf",
+          stat2: "haben keine Möglichkeit zu lernen",
+          stat3: "sind gezwungen zu arbeiten",
+          stat4: "verlieren täglich ihr Leben durch vermeidbare Ursachen",
+          stat5: "brauchen dringend medizinische Hilfe",
+          stat6: "leben in Angst vor Gewalt und Ausbeutung",
+
+          // Форма
+          formTitle: "Jetzt spenden",
+          personalData: "Persönliche Daten",
+          firstName: "Vorname",
+          lastName: "Nachname",
+          email: "E-Mail",
+          phone: "Telefonnummer",
+          donationAmount: "Spendenbetrag",
+          oneTime: "Einmalig",
+          monthly: "Monatlich",
+          otherAmount: "Anderer Betrag",
+          continue: "Spenden Sie heute",
+          sendButton: "Absenden",
+          // Воздействие
+          impactTitle: "Ihre Hilfe verändert Schicksale",
+          impact1: "Ein Teller Essen",
+          impact1Text:
+            "Für ein Kind bedeutet Ihre Spende nicht nur Nahrung, sondern neue Lebenskraft und Hoffnung.",
+          impact2: "Eine Chance auf Schule",
+          impact2Text:
+            "Bildung ist der Schlüssel. Ihre Unterstützung öffnet Kindern Türen zu einer besseren Zukunft.",
+          impact3: "Schutz statt Angst",
+          impact3Text:
+            "Ihre Hilfe bewahrt Kinder vor Gewalt, Ausbeutung und einem Leben auf der Straße.",
+          impact4: "Gesundheit schenken",
+          impact4Text:
+            "Viele Krankheiten sind heilbar – wenn Medikamente und Ärzte erreichbar sind.",
+          impact5: "Kindheit zurückgeben",
+          impact5Text:
+            "Mit Ihrer Unterstützung können Kinder wieder spielen, lachen und träumen.",
+          impact6: "Ein Leben voller Hoffnung",
+          impact6Text:
+            "Jede Spende schenkt nicht nur Hilfe, sondern ein Versprechen: Du bist nicht allein.",
+
+          // Донация
+          donationTitle: "Ihre Spende ist mehr als Geld",
+          donationText:
+            "Sie verwandeln Verzweiflung in Hoffnung. Sie schenken Kindern nicht nur heute Hilfe, sondern morgen eine Zukunft.",
+          chooseTitle: "Wählen Sie Ihre Hilfe",
+          chooseText: "Schon ein kleiner Beitrag verändert ein Leben",
+          once: "Einmalig",
+          monthly: "Monatlich",
+          next: "Weiter",
+          privacyAgreement:
+            'Ich habe die <a href="privacy-policy.html" target="_blank" class="text-cyan-600 underline">Datenschutzerklärung</a> gelesen und stimme zu.*',
+
+          // Футер
+          privacy: "Datenschutz",
+          imprint: "Impressum",
+          contact: "Kontakt",
+          rights: "© 2025 Hilfehub.",
+        },
+        en: {
+          // Навигация
+          about: "About us",
+          member: "Become a member",
+          partners: "Partners",
+          vacation: "Request vacation",
+          sendDataTitle: "Become a member",
+          followUs: "Follow us",
+          willYouReceive: "Get new updates first",
+          contactTitle: "Contact",
+          makeAwish: "Währinger Straße 169-171 4/3 1180 Vienna",
+          navStartseite: "Home",
+          ihreUnterstützung:
+            "Your support helps us to <br /> Heartfelt wishes of seriously ill children <br /> to make it come true",
+          cookiesMessage:
+            "We use cookies to ensure that we give you the best experience on our website.",
+          learnMore: "Learn More",
+          gotIt: "Got it!",
+
+          officeHours: "Office Hours",
+          officeHoursText: "Tuesday – Friday 10:00 am – 2:00 pm",
+          phoneTitle: "Phone",
+          bankTransfer: "Bank Transfer",
+          bankDetails:
+            "First Bank: IBAN: AT52 2011 1404 1027 7701 BIC: GIBAATWWXXX",
+          donateNow: "DONATE NOW >",
+          becomeMember: "SUBSCRIBE TO THE NEWSLETTER >",
+
+          // Навигация (нижняя)
+          navAbout: "About us",
+          navMember: "Become a member",
+          navPartners: "Partners",
+          navPartnerHotels: "Partner hotels",
+          navPartnerOrgs: "Partner organizations",
+          navVacation: "Our projects",
+          navMore: "News",
+          navAktuelles: "News",
+          navPresse: "Press",
+          navGutschein: "2for1 voucher",
+          navTermine: "Appointments",
+
+          // Герой
+          heroTitle: "Give Children <br> a Future",
+          heroSubtitle:
+            "No child should suffer, starve, or lose their childhood",
+          heroText:
+            "Every day, millions of children fight for survival. Your donation means food, safety, and hope.",
+          helpNow: "Help now",
+          learnMore: "Learn more",
+
+          // Статистика
+          crisisTitle: "The Harsh Reality",
+          stat1: "Children wake up hungry",
+          stat2: "have no chance to go to school",
+          stat3: "are forced into labor",
+          stat4: "lose their lives daily from preventable causes",
+          stat5: "urgently need medical care",
+          stat6: "live in fear of violence and exploitation",
+
+          // Форма
+          formTitle: "Donate now",
+          personalData: "Personal Data",
+          firstName: "First Name",
+          lastName: "Last Name",
+          email: "Email",
+          phone: "Phone Number",
+          donationAmount: "Donation Amount",
+          oneTime: "One Time",
+          monthly: "Monthly",
+          otherAmount: "Other Amount",
+          continue: "Donate today",
+          sendButton: "Send now",
+          privacyAgreement:
+            'I have read the <a href="privacy-policy.html" target="_blank" class="text-cyan-600 underline">Privacy Policy</a> and agree.*',
+
+          // Воздействие
+          impactTitle: "Your Help Changes Lives",
+          impact1: "A Plate of Food",
+          impact1Text:
+            "For a child, your donation means not just food, but life, strength, and hope.",
+          impact2: "A Chance to Learn",
+          impact2Text:
+            "Education is the key. Your support opens doors to a brighter future.",
+          impact3: "Safety Instead of Fear",
+          impact3Text:
+            "Your help protects children from violence, exploitation, and life on the streets.",
+          impact4: "Health and Healing",
+          impact4Text:
+            "Most illnesses are curable – if children can reach doctors and medicine.",
+          impact5: "Childhood Restored",
+          impact5Text:
+            "With your support, children can laugh, play, and dream again.",
+          impact6: "A Life of Hope",
+          impact6Text:
+            "Every donation is not just help – it’s a promise: You are not alone.",
+
+          // Донация
+          donationTitle: "Your Donation Is More Than Money",
+          donationText:
+            "You turn despair into hope. You give children not only help today, but a future tomorrow.",
+          chooseTitle: "Choose Your Help",
+          chooseText: "Even the smallest gift changes a life",
+          once: "Once",
+          monthly: "Monthly",
+          next: "Next",
+
+          // Футер
+          privacy: "Privacy",
+          imprint: "Imprint",
+          contact: "Contact",
+          rights: "© 2025 Hilfehub.",
+        },
+      };
+
+      // Функция перевода страницы
+      // Функция перевода страницы
+      function translatePage(lang) {
+        // Обновляем текст элементов с атрибутом data-i18n
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          if (translations[lang][key]) {
+            if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+              element.placeholder = translations[lang][key];
+            }
+            // Для элементов, содержащих HTML-разметку
+            else if (element.hasAttribute("data-i18n-html")) {
+              element.innerHTML = translations[lang][key];
+            }
+            // Для обычных элементов
+            else {
+              element.textContent = translations[lang][key];
+            }
+          }
+        });
+
+        // Обновляем кнопку языка
+        const langButton = document.getElementById("language-toggle");
+        if (langButton) {
+          langButton.querySelector("span").textContent = lang.toUpperCase();
+        }
+
+        // Сохраняем текущий язык
+        localStorage.setItem("language", lang);
+      }
+
+      // Инициализация перевода при загрузке
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedLang = localStorage.getItem("language") || "de";
+        translatePage(savedLang);
+
+        // Обработчик для кнопки языка
+        const langButton = document.getElementById("language-toggle");
+        if (langButton) {
+          langButton.addEventListener("click", function () {
+            const currentLang = localStorage.getItem("language") || "de";
+            const newLang = currentLang === "de" ? "en" : "de";
+            translatePage(newLang);
+          });
+        }
+      });
+    </script>
+    <script>
+      // ================ ИСПРАВЛЕННЫЙ КОД ДЛЯ ОПЛАТЫ ================
+      document.addEventListener("DOMContentLoaded", function () {
+        // Элементы формы
+        const donationOptions = document.querySelectorAll(".donation-option");
+        const customAmountInput = document.querySelector(".andererBetrag");
+        const donateButton = document.getElementById("donate-btn");
+        const frequencyButtons = document.querySelectorAll(".frequency-btn");
+        const cardErrors = document.getElementById("card-errors");
+
+        // Проверяем, что все элементы найдены
+        if (!donateButton) {
+          console.error("Кнопка donate-btn не найдена!");
+          return;
+        }
+        if (!cardErrors) {
+          console.error("Элемент card-errors не найден!");
+          return;
+        }
+
+        let selectedAmount = null;
+        let isMonthly = false;
+
+        // Обработчики для кнопок выбора суммы
+        donationOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            // Убираем выделение у всех
+            donationOptions.forEach((opt) => opt.classList.remove("selected"));
+
+            // Выделяем текущий
+            this.classList.add("selected");
+
+            if (this.dataset.amount === "other") {
+              // Фокусируемся на инпуте
+              if (customAmountInput) {
+                customAmountInput.focus();
+                selectedAmount = customAmountInput.value;
+              }
+            } else {
+              selectedAmount = this.dataset.amount;
+              if (customAmountInput) {
+                customAmountInput.value = "";
+              }
+            }
+
+            updateDonateButton();
+          });
+        });
+
+        // Обработчик для кастомного инпута
+        if (customAmountInput) {
+          customAmountInput.addEventListener("input", function () {
+            // Убедимся, что выбрана опция "другая сумма"
+            const otherOption = document.querySelector(
+              '.donation-option[data-amount="other"]'
+            );
+            if (otherOption) {
+              donationOptions.forEach((opt) =>
+                opt.classList.remove("selected")
+              );
+              otherOption.classList.add("selected");
+              selectedAmount = this.value;
+            }
+
+            updateDonateButton();
+          });
+        }
+
+        // Обработчики для переключателя периодичности
+        frequencyButtons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            frequencyButtons.forEach((b) => b.classList.remove("selected"));
+            this.classList.add("selected");
+            isMonthly = this.dataset.frequency === "monthly";
+          });
+        });
+
+        // Обновление состояния кнопки пожертвовать
+        function updateDonateButton() {
+          const amount = parseFloat(selectedAmount);
+
+          if (!isNaN(amount) && amount > 0) {
+            donateButton.disabled = false;
+            donateButton.classList.remove("opacity-70", "cursor-not-allowed");
+            donateButton.classList.add("cursor-pointer");
+          } else {
+            donateButton.disabled = true;
+            donateButton.classList.add("opacity-70", "cursor-not-allowed");
+            donateButton.classList.remove("cursor-pointer");
+          }
+        }
+
+        // Обработчик для кнопки пожертвовать
+        donateButton.addEventListener("click", async function (e) {
+          e.preventDefault();
+
+          // Проверяем, что сумма выбрана
+          if (!selectedAmount || parseFloat(selectedAmount) <= 0) {
+            cardErrors.textContent = "Bitte wählen Sie einen Betrag aus";
+            return;
+          }
+
+          // Очищаем предыдущие ошибки
+          cardErrors.textContent = "";
+
+          // Показываем лоадер
+          const originalText = this.innerHTML;
+          this.innerHTML = `
+                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Wird verarbeitet...
+                `;
+          this.disabled = true;
+
+          try {
+            const amount = parseFloat(selectedAmount).toFixed(2);
+            const frequency = isMonthly ? "monthly" : "once";
+
+            console.log("Отправляем:", { amount, frequency });
+
+            // Отправляем запрос на сервер
+            const response = await fetch(
+              "http://localhost:3000/create-payment",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  amount: amount,
+                  frequency: frequency,
+                }),
+              }
+            );
+
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log("Ответ сервера:", data);
+
+            if (data.paymentUrl) {
+              // Перенаправляем на страницу оплаты Mollie
+              window.location.href = data.paymentUrl;
+            } else {
+              throw new Error(data.error || "Payment URL не получен");
+            }
+          } catch (error) {
+            console.error("Ошибка:", error);
+            cardErrors.textContent = "Fehler: " + error.message;
+
+            // Восстанавливаем кнопку
+            this.innerHTML = originalText;
+            this.disabled = false;
+          }
+        });
+      });
+      // ================ КОНЕЦ НОВОГО КОДА ДЛЯ ОПЛАТЫ ================
+    </script>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        <span data-i18n="cookiesMessage"
+          >Wir verwenden Cookies, um sicherzustellen, dass wir Ihnen das beste
+          Erlebnis auf unserer Website bieten.</span
+        >
+        <a
+          href="privacy-policy.html"
+          data-i18n="learnMore"
+          id="learn-more-link"
+          target="_blank"
+          class="learn-more"
+          >Mehr erfahren</a
+        >
+      </p>
+      <button id="cookie-accept" class="cookie-btn" data-i18n="gotIt">
+        Verstanden!
+      </button>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const banner = document.getElementById("cookie-banner");
+        const acceptBtn = document.getElementById("cookie-accept");
+        const learnMore = document.getElementById("learn-more-link");
+
+        // Всегда показываем баннер при загрузке страницы
+        banner.style.display = "flex";
+
+        acceptBtn.addEventListener("click", () => {
+          // Просто скрываем баннер без сохранения в localStorage
+          banner.style.display = "none";
+        });
+
+        learnMore.href = "privacy-policy.html";
+      });
+    </script>
+  </body>
+</html>
