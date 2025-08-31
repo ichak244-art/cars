@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="about_page_title">Datenschutz | Hilfehub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="privacy-policy.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar sticky top-0 w-full backdrop-blur-md z-50 border-b border-gray-100 shadow-sm"
+      style="background-color: white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Лого -->
+          <!-- Название крупным планом -->
+          <div class="flex flex-col items-center">
+            <img
+              src="processed_image (1).png"
+              alt="Icon"
+              class="h-12 w-12 -translate-x-1 translate-y-1"
+            />
+            <span class="text-xl font-extrabold h1Color mb-2">Hilfehub</span>
+          </div>
+
+          <!-- Десктоп навигация -->
+          <div
+            class="hidden md:flex items-center space-x-6 relative"
+            id="desktop-menu"
+          >
+            <a
+              href="index.html"
+              data-i18n="navStartseite"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Startseite</a
+            >
+            <a
+              href="about.html"
+              data-i18n="navAbout"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Über uns</a
+            >
+            <a
+              href="index.html#donatenow"
+              data-i18n="navMember"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Mitglied werden</a
+            >
+
+            <!-- Partner dropdown -->
+            <div class="relative group">
+              <button
+                data-i18n="navPartners"
+                class="text-gray-800 hover:text-cyan-500 transition-colors font-medium flex items-center"
+              >
+                Partner
+                <svg
+                  class="w-4 h-4 ml-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 mt-2 w-56 z-10"
+              >
+                <a
+                  href="#partnerhotels"
+                  data-i18n="navPartnerHotels"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Partnerhotels</a
+                >
+                <a
+                  href="#partnerorgs"
+                  data-i18n="navPartnerOrgs"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Partnerorganisationen</a
+                >
+              </div>
+            </div>
+
+            <a
+              href="#vacation"
+              data-i18n="navVacation"
+              class="text-gray-800 hover:text-cyan-500 transition-colors font-medium"
+              >Unsere Projekte</a
+            >
+
+            <!-- Mehr dropdown -->
+            <div class="relative group">
+              <button
+                data-i18n="navMore"
+                class="text-gray-800 hover:text-cyan-500 transition-colors font-medium flex items-center"
+              >
+                Nachrichten
+                <svg
+                  class="w-4 h-4 ml-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                class="absolute hidden group-hover:block bg-white shadow-md rounded-md py-2 mt-2 w-56 z-10"
+              >
+                <a
+                  href="#aktuelles"
+                  data-i18n="navAktuelles"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Aktuelles</a
+                >
+                <a
+                  href="#presse"
+                  data-i18n="navPresse"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Presse</a
+                >
+                <a
+                  href="#gutschein"
+                  data-i18n="navGutschein"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >2for1 Gutschein</a
+                >
+                <a
+                  href="#termine"
+                  data-i18n="navTermine"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >Termine</a
+                >
+                <a
+                  href="#onesong"
+                  data-i18n="navOneSong"
+                  class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >One Song, one family</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Кнопка мобильного меню и переключатель языка -->
+          <div class="flex items-center gap-4">
+            <!-- Кнопка мобильного меню -->
+            <button
+              id="mobile-menu-button"
+              class="md:hidden text-gray-800 focus:outline-none"
+            >
+              <svg
+                id="mobile-menu-icon-open"
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+              <svg
+                id="mobile-menu-icon-close"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <!-- Переключатель языка -->
+            <button
+              id="language-toggle"
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium h-9 rounded-md px-3 bg-gray border border-white text-gray-700 bg-yellow hover:bg-gray-50"
+            >
+              <svg
+                class="lucide lucide-languages w-4 h-4 mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="m5 8 6 6" />
+                <path d="m4 14 6-6 2-3" />
+                <path d="M2 5h12" />
+                <path d="M7 2h1" />
+                <path d="m22 22-5-10-5 10" />
+                <path d="M14 18h6" />
+              </svg>
+              <span>DE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Мобильное меню -->
+    <div
+      id="mobile-menu"
+      class="md:hidden hidden flex-col space-y-2 text-left w-full bg-white px-4 py-2 absolute top-16 left-0 shadow-lg z-40"
+    >
+      <a
+        href="index.html"
+        data-i18n="navStartseite"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Startseite</a
+      >
+      <a
+        href="about.html"
+        data-i18n="navAbout"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Über uns</a
+      >
+      <a
+        href="index.html#donatenow"
+        data-i18n="navMember"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Mitglied werden</a
+      >
+
+      <!-- Partner -->
+      <div class="py-3 mobile-menu-item">
+        <button
+          id="mobile-partner-btn"
+          data-i18n="navPartners"
+          class="w-full text-left text-gray-800 font-medium flex items-center justify-between"
+        >
+          Partner
+        </button>
+      </div>
+
+      <a
+        href="#vacation"
+        data-i18n="navVacation"
+        class="block text-gray-800 font-medium py-3 mobile-menu-item"
+        >Unsere Projekte</a
+      >
+
+      <!-- Mehr -->
+      <div class="py-3 mobile-menu-item">
+        <button
+          id="mobile-mehr-btn"
+          data-i18n="navMore"
+          class="w-full text-left text-gray-800 font-medium flex items-center justify-between"
+        >
+          Nachrichten
+        </button>
+      </div>
+    </div>
+    <main class="mx-auto max-w-3xl px-4">
+      <h1 data-i18n="privacyHeading" class="font-bold mb-14 mt-10 pol">
+        Datenschutzerklärung des Vereins „Hilfehub“
+      </h1>
+
+      <section id="general">
+        <h2
+          data-i18n="privacyGeneralTitle"
+          class="text-3xl md:text-4xl font-bold mb-6"
+        >
+          1. Allgemeine Bestimmungen
+        </h2>
+        <p
+          data-i18n-html="privacyGeneralText"
+          class="text-gray-700 animate-fadeIn"
+        >
+          Der Verein „Hilfehub“ ist ein in Österreich eingetragener Verein
+          (gemeinnütziger Verein) und handelt auf Grundlage des Vereinsgesetzes
+          2002 (Vereinsrecht). Der Verein ist als gemeinnützig anerkannt
+          (Gemeinnützigkeit) und verarbeitet personenbezogene Daten
+          ausschließlich im Rahmen seiner satzungsgemäßen und gemeinnützigen
+          Tätigkeiten.
+          <br />
+          Bei der Verarbeitung personenbezogener Daten beachtet der Verein die
+          Vorgaben der Datenschutz-Grundverordnung (DSGVO/GDPR) sowie die
+          einschlägigen Bestimmungen des österreichischen Rechts.
+        </p>
+      </section>
+
+      <section id="responsible">
+        <h2
+          data-i18n="privacyResponsibleTitle"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          2. Verantwortliche Stelle
+        </h2>
+        <p
+          data-i18n-html="privacyResponsibleText"
+          class="text-gray-700 animate-fadeIn"
+        >
+          Verein „Hilfehub“<br />
+          (Adresse des Vereins in Österreich)<br />
+          E-Mail: hilfehubwien@gmail.com<br />
+          Vorsitzende: Lola Kamalova
+        </p>
+      </section>
+
+      <section id="data">
+        <h2
+          data-i18n="privacyDataTitle"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          3. Welche Daten wir verarbeiten
+        </h2>
+        <p
+          data-i18n-html="privacyDataText"
+          class="text-gray-700 animate-fadeIn"
+        >
+          Der Verein kann folgende personenbezogene Daten erheben und
+          verarbeiten:
+          <br />• Vor- und Nachname, <br />• E-Mail-Adresse, <br />•
+          Postanschrift (falls angegeben), <br />• Zahlungsdaten und
+          Informationen zu Spenden (Betrag, Häufigkeit, Zahlungsart), <br />•
+          Mitgliedsdaten (Beitrittsdatum, Status, Beiträge), <br />• Daten, die
+          über Kontaktformulare oder per E-Mail übermittelt werden.
+        </p>
+      </section>
+
+      <section id="purpose">
+        <h2
+          data-i18n="privacyPurposeTitle"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          4. Zwecke der Verarbeitung
+        </h2>
+        <p
+          data-i18n-html="privacyPurposeText"
+          class="text-gray-700 animate-fadeIn"
+        >
+          Ihre personenbezogenen Daten werden ausschließlich für vereinsbezogene
+          Zwecke genutzt, insbesondere:
+          <br />• Bearbeitung und Verwaltung von Spenden, <br />• Führung des
+          Mitgliederverzeichnisses und Verwaltung der Mitgliedschaften, <br />•
+          Erfüllung der satzungsgemäßen Ziele des Vereins (Vereinsrecht,
+          Gemeinnützigkeit), <br />• Buchhaltung und steuerliche Pflichten,
+          <br />• Information über die Aktivitäten des Vereins, <br />•
+          Beantwortung von Anfragen.
+        </p>
+      </section>
+
+      <section id="legal-basis">
+        <h2
+          data-i18n="privacyLegalTitle"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          5. Rechtsgrundlagen der Verarbeitung
+        </h2>
+        <p
+          data-i18n-html="privacyLegalText"
+          class="text-gray-700 animate-fadeIn"
+        >
+          Die Verarbeitung erfolgt auf Grundlage von:
+          <br />• Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), z. B. bei
+          Newsletter-Anmeldungen, <br />• Vertrag/Mitgliedschaft (Art. 6 Abs. 1
+          lit. b DSGVO), <br />• Rechtlichen Verpflichtungen (Art. 6 Abs. 1 lit.
+          c DSGVO), z. B. Buchhaltung und Vereinsrecht, <br />• Berechtigtem
+          Interesse des Vereins (Art. 6 Abs. 1 lit. f DSGVO), z. B.
+          Gewährleistung der Sicherheit der Website.
+        </p>
+      </section>
+
+      <section id="third-parties">
+        <h2
+          data-i18n="privacyThirdpartiesTitle"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          6. Weitergabe von Daten an Dritte
+        </h2>
+        <p
+          data-i18n-html="privacyThirdpartiesText"
+          class="text-gray-700 animate-fadeIn"
+        >
+          Ihre Daten können nur insoweit weitergegeben werden, wie dies zur
+          Erfüllung der Aufgaben des Vereins erforderlich ist:
+          <br />• an Banken und Zahlungsdienstleister zur Abwicklung von
+          Spenden, <br />• an Steuer- und Behörden, soweit dies gesetzlich
+          vorgeschrieben ist, <br />• an IT-Dienstleister zur Sicherstellung des
+          Websitebetriebs. <br />Eine Weitergabe zu Werbezwecken erfolgt nicht.
+        </p>
+      </section>
+
+      <section id="storage">
+        <h2
+          data-i18n="privacyStorageTitle"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          7. Speicherdauer
+        </h2>
+        <p
+          data-i18n-html="privacyStorageText"
+          class="text-gray-700 animate-fadeIn"
+        >
+          • Spendenunterlagen und Buchhaltungsdokumente werden mindestens 7
+          Jahre gemäß österreichischem Recht aufbewahrt.
+          <br />• Mitgliedsdaten werden während der gesamten Mitgliedschaft und
+          darüber hinaus entsprechend den Fristen des Vereinsrechts und
+          Steuerrechts gespeichert. <br />• Kontaktdaten für Newsletter werden
+          bis zum Widerruf der Einwilligung gespeichert.
+        </p>
+      </section>
+
+      <section id="cookies">
+        <h2
+          data-i18n="privacyCookiesTitle"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          8. Cookies und verwendete Technologien
+        </h2>
+        <p data-i18n="privacyCookiesText" class="text-gray-700 animate-fadeIn">
+          Auf der Website des Vereins werden nur technisch notwendige Cookies
+          für die einwandfreie Funktion von Formularen und Sitzungen eingesetzt.
+          Zur sicheren Datenübertragung wird SSL-Verschlüsselung verwendet.
+        </p>
+      </section>
+
+      <section id="rights">
+        <h2
+          data-i18n="privacyRightsTitle"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          9. Ihre Rechte
+        </h2>
+        <p
+          data-i18n-html="privacyRightsText"
+          class="text-gray-700 animate-fadeIn"
+        >
+          Sie haben das Recht:
+          <br />• Auskunft über Ihre Daten zu erhalten, <br />• Berichtigung
+          oder Löschung zu verlangen, <br />• die Verarbeitung einzuschränken,
+          <br />• Ihre Einwilligung jederzeit zu widerrufen, <br />• eine
+          Beschwerde bei der österreichischen Datenschutzbehörde einzureichen.
+        </p>
+      </section>
+
+      <section id="changes">
+        <h2
+          data-i18n="privacyChangesTitle"
+          class="text-3xl md:text-4xl font-bold mb-6 mt-6"
+        >
+          10. Änderungen der Datenschutzerklärung
+        </h2>
+        <p
+          data-i18n="privacyChangesText"
+          class="text-gray-700 animate-fadeIn mb-12"
+        >
+          Der Verein behält sich das Recht vor, die Datenschutzerklärung zu
+          ändern. Die jeweils aktuelle Version wird auf der Website
+          veröffentlicht.
+        </p>
+      </section>
+    </main>
+
+    <footer
+      class="bg-cyan-500 text-white py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <!-- Обновленный блок с иконкой и текстом вместо логотипа -->
+          <div class="flex flex-col items-center mb-4 md:mb-0">
+            <div class="mb-2">
+              <img src="processed_image (1).png" alt="Icon" class="h-20 w-20" />
+            </div>
+            <span class="text-3xl font-extrabold h1Color">Hilfehub</span>
+          </div>
+
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="hover:text-cyan-400 transition-colors"
+              data-i18n="privacy"
+              >Datenschutz</a
+            >
+            <a
+              href="#"
+              class="hover:text-cyan-400 transition-colors"
+              data-i18n="imprint"
+              >Impressum</a
+            >
+            <a
+              href="#"
+              class="hover:text-cyan-400 transition-colors"
+              data-i18n="contact"
+              >Kontakt</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+        >
+          <div>
+            <h3 class="text-2xl font-bold mb-4" data-i18n="contactTitle">
+              Kontakt
+            </h3>
+            <p class="mb-4" data-i18n="makeAwish">
+              Währinger Straße 169-171 4/3 1180 Wien
+            </p>
+
+            <h4 class="text-xl font-semibold mt-6 mb-2" data-i18n="officeHours">
+              Bürozeiten
+            </h4>
+            <p data-i18n="officeHoursText">
+              Dienstag – Freitag<br />10:00 Uhr – 14:00 Uhr
+            </p>
+
+            <h4 class="text-xl font-semibold mt-6 mb-2" data-i18n="phoneTitle">
+              Telefon
+            </h4>
+            <p>+43 670 7018780</p>
+            <p>hilfehubwien@gmail.com</p>
+
+            <div class="mt-6 flex items-center space-x-4">
+              <a
+                href="https://www.facebook.com/share/16d6mYTzJt/?mibextid=wwXIfr"
+                target="_blank"
+                class="text-white hover:text-cyan-200 transition-colors"
+              >
+                <i class="fab fa-facebook-f text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="text-white hover:text-cyan-200 transition-colors"
+              >
+                <i class="fab fa-instagram text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="text-white hover:text-cyan-200 transition-colors"
+              >
+                <i class="fab fa-tiktok text-2xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- <div>
+                    <h3 class="text-2xl font-bold mb-4" data-i18n="bankTransfer">Banküberweisung</h3>
+                    <p data-i18n="bankDetails">Erste Bank:<br>
+                        IBAN: AT52 2011 1404 1027 7701<br>
+                        BIC: GIBAATWWXXX</p>
+                </div> -->
+        </div>
+
+        <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="index.html#donatenow"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-12 rounded-md bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 shadow-lg transition-all"
+            data-i18n="donateNow"
+          >
+            JETZT SPENDEN >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-12 rounded-md bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 shadow-lg transition-all"
+            data-i18n="becomeMember"
+          >
+            ZUM NEWSLSETTER ANMELDEN >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-right"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="mt-8 pt-8 text-center border-t border-white/20">
+          <p data-i18n="rights">© 2025 Hilfehub.</p>
+          <a
+            href="privacy-policy.html"
+            target="_blank"
+            class="text-white hover:text-cyan-200 transition-colors block mt-2"
+            data-i18n="footerDatenschutz"
+          >
+            Datenschutz
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const translations = {
+        de: {
+          // Navigation
+          navStartseite: "Startseite",
+          navAbout: "Über uns",
+          navMember: "Mitglied werden",
+          navPartners: "Partner",
+          navPartnerHotels: "Partnerhotels",
+          navPartnerOrgs: "Partnerorganisationen",
+          navVacation: "Unsere Projekte",
+          navMore: "Nachrichten",
+          navAktuelles: "Aktuelles",
+          navPresse: "Presse",
+          navGutschein: "2for1 Gutschein",
+          navTermine: "Termine",
+          navOneSong: "One Song, one family",
+          footerDatenschutz: "Datenschutz",
+          about_page_title: "Datenschutz | Hilfehub",
+
+          // Datenschutzerklärung
+          privacyHeading: "Datenschutzerklärung des Vereins „Hilfehub“",
+          privacyGeneralTitle: "1. Allgemeine Bestimmungen",
+          privacyGeneralText:
+            "Der Verein „Hilfehub“ ist ein in Österreich eingetragener Verein (gemeinnütziger Verein) und handelt auf Grundlage des Vereinsgesetzes 2002 (Vereinsrecht). Der Verein ist als gemeinnützig anerkannt (Gemeinnützigkeit) und verarbeitet personenbezogene Daten ausschließlich im Rahmen seiner satzungsgemäßen und gemeinnützigen Tätigkeiten.<br />Bei der Verarbeitung personenbezogener Daten beachtet der Verein die Vorgaben der Datenschutz-Grundverordnung (DSGVO/GDPR) sowie die einschlägigen Bestimmungen des österreichischen Rechts.",
+
+          privacyResponsibleTitle: "2. Verantwortliche Stelle",
+          privacyResponsibleText:
+            "Verein „Hilfehub“<br />(Adresse des Vereins in Österreich)<br />E-Mail: hilfehubwien@gmail.com<br />Vorsitzende: Lola Kamalova",
+
+          privacyDataTitle: "3. Welche Daten wir verarbeiten",
+          privacyDataText:
+            "Der Verein kann folgende personenbezogene Daten erheben und verarbeiten:<br />• Vor- und Nachname,<br />• E-Mail-Adresse,<br />• Postanschrift (falls angegeben),<br />• Zahlungsdaten und Informationen zu Spenden (Betrag, Häufigkeit, Zahlungsart),<br />• Mitgliedsdaten (Beitrittsdatum, Status, Beiträge),<br />• Daten, die über Kontaktformulare oder per E-Mail übermittelt werden.",
+
+          privacyPurposeTitle: "4. Zwecke der Verarbeitung",
+          privacyPurposeText:
+            "Ihre personenbezogenen Daten werden ausschließlich für vereinsbezogene Zwecke genutzt, insbesondere:<br />• Bearbeitung und Verwaltung von Spenden,<br />• Führung des Mitgliederverzeichnisses und Verwaltung der Mitgliedschaften,<br />• Erfüllung der satzungsgemäßen Ziele des Vereins (Vereinsrecht, Gemeinnützigkeit),<br />• Buchhaltung und steuerliche Pflichten,<br />• Information über die Aktivitäten des Vereins,<br />• Beantwortung von Anfragen.",
+
+          privacyLegalTitle: "5. Rechtsgrundlagen der Verarbeitung",
+          privacyLegalText:
+            "Die Verarbeitung erfolgt auf Grundlage von:<br />• Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), z. B. bei Newsletter-Anmeldungen,<br />• Vertrag/Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO),<br />• Rechtlichen Verpflichtungen (Art. 6 Abs. 1 lit. c DSGVO), z. B. Buchhaltung und Vereinsrecht,<br />• Berechtigtem Interesse des Vereins (Art. 6 Abs. 1 lit. f DSGVO), z. B. Gewährleistung der Sicherheit der Website.",
+
+          privacyThirdpartiesTitle: "6. Weitergabe von Daten an Dritte",
+          privacyThirdpartiesText:
+            "Ihre Daten können nur insoweit weitergegeben werden, wie dies zur Erfüllung der Aufgaben des Vereins erforderlich ist:<br />• an Banken und Zahlungsdienstleister zur Abwicklung von Spenden,<br />• an Steuer- und Behörden, soweit dies gesetzlich vorgeschrieben ist,<br />• an IT-Dienstleister zur Sicherstellung des Websitebetriebs.<br />Eine Weitergabe zu Werbezwecken erfolgt nicht.",
+
+          privacyStorageTitle: "7. Speicherdauer",
+          privacyStorageText:
+            "• Spendenunterlagen und Buchhaltungsdokumente werden mindestens 7 Jahre gemäß österreichischem Recht aufbewahrt.<br />• Mitgliedsdaten werden während der gesamten Mitgliedschaft und darüber hinaus entsprechend den Fristen des Vereinsrechts und Steuerrechts gespeichert.<br />• Kontaktdaten für Newsletter werden bis zum Widerruf der Einwilligung gespeichert.",
+
+          privacyCookiesTitle: "8. Cookies und verwendete Technologien",
+          privacyCookiesText:
+            "Auf der Website des Vereins werden nur technisch notwendige Cookies für die einwandfreie Funktion von Formularen und Sitzungen eingesetzt. Zur sicheren Datenübertragung wird SSL-Verschlüsselung verwendet.",
+
+          privacyRightsTitle: "9. Ihre Rechte",
+          privacyRightsText:
+            "Sie haben das Recht:<br />• Auskunft über Ihre Daten zu erhalten,<br />• Berichtigung oder Löschung zu verlangen,<br />• die Verarbeitung einzuschränken,<br />• Ihre Einwilligung jederzeit zu widerrufen,<br />• eine Beschwerde bei der österreichischen Datenschutzbehörde einzureichen.",
+
+          privacyChangesTitle: "10. Änderungen der Datenschutzerklärung",
+          privacyChangesText:
+            "Der Verein behält sich das Recht vor, die Datenschutzerklärung zu ändern. Die jeweils aktuelle Version wird auf der Website veröffentlicht.",
+
+          // Footer
+          privacy: "Datenschutz",
+          imprint: "Impressum",
+          contact: "Kontakt",
+          contactTitle: "Kontakt",
+          makeAwish: "Währinger Straße 169-171 4/3 1180 Wien",
+          officeHours: "Bürozeiten",
+          officeHoursText: "Dienstag – Freitag<br />10:00 Uhr – 14:00 Uhr",
+          phoneTitle: "Telefon",
+          donateNow: "JETZT SPENDEN >",
+          becomeMember: "ZUM NEWSLETTER ANMELDEN >",
+          rights: "© 2025 Hilfehub.",
+        },
+
+        en: {
+          // Navigation
+          navStartseite: "Home",
+          navAbout: "About us",
+          navMember: "Become a member",
+          navPartners: "Partners",
+          navPartnerHotels: "Partner hotels",
+          navPartnerOrgs: "Partner organizations",
+          navVacation: "Our projects",
+          navMore: "News",
+          navAktuelles: "News",
+          navPresse: "Press",
+          navGutschein: "2for1 Voucher",
+          navTermine: "Events",
+          navOneSong: "One Song, one family",
+          footerDatenschutz: "Privacy Policy",
+
+          // Privacy Policy
+          privacyHeading: "Privacy Policy of the Association „Hilfehub“",
+          privacyGeneralTitle: "1. General Provisions",
+          privacyGeneralText:
+            "The association „Hilfehub“ is a registered non-profit association in Austria and acts on the basis of the Association Act 2002. The association is recognized as non-profit and processes personal data exclusively within the framework of its statutory and non-profit activities.<br />When processing personal data, the association complies with the provisions of the General Data Protection Regulation (GDPR) and the relevant Austrian laws.",
+
+          privacyResponsibleTitle: "2. Responsible Body",
+          privacyResponsibleText:
+            "Association „Hilfehub“<br />(Address of the association in Austria)<br />Email: hilfehubwien@gmail.com<br />Chairwoman: Lola Kamalova",
+
+          privacyDataTitle: "3. What data we process",
+          privacyDataText:
+            "The association may collect and process the following personal data:<br />• First and last name,<br />• Email address,<br />• Postal address (if provided),<br />• Payment data and donation information (amount, frequency, payment method),<br />• Membership data (date of joining, status, contributions),<br />• Data transmitted via contact forms or email.",
+
+          privacyPurposeTitle: "4. Purposes of processing",
+          privacyPurposeText:
+            "Your personal data is used exclusively for association-related purposes, in particular:<br />• Processing and administration of donations,<br />• Maintaining the membership directory and managing memberships,<br />• Fulfilling the statutory objectives of the association (association law, non-profit status),<br />• Accounting and tax obligations,<br />• Information about the association's activities,<br />• Responding to inquiries.",
+
+          privacyLegalTitle: "5. Legal bases of processing",
+          privacyLegalText:
+            "Processing is carried out on the basis of:<br />• Consent (Art. 6 para. 1 lit. a GDPR), e.g., for newsletter subscriptions,<br />• Contract/Membership (Art. 6 para. 1 lit. b GDPR),<br />• Legal obligations (Art. 6 para. 1 lit. c GDPR), e.g., accounting and association law,<br />• Legitimate interests of the association (Art. 6 para. 1 lit. f GDPR), e.g., ensuring website security.",
+
+          privacyThirdpartiesTitle: "6. Disclosure of data to third parties",
+          privacyThirdpartiesText:
+            "Your data may only be disclosed to the extent necessary to fulfill the association's tasks:<br />• to banks and payment service providers for processing donations,<br />• to tax authorities and government agencies, where legally required,<br />• to IT service providers to ensure website operation.<br />Data is not disclosed for advertising purposes.",
+
+          privacyStorageTitle: "7. Storage period",
+          privacyStorageText:
+            "• Donation records and accounting documents are kept for at least 7 years in accordance with Austrian law.<br />• Membership data is stored throughout the entire membership period and beyond, in accordance with the deadlines of association and tax law.<br />• Contact data for newsletters is stored until consent is revoked.",
+
+          privacyCookiesTitle: "8. Cookies and technologies used",
+          privacyCookiesText:
+            "On the association's website, only technically necessary cookies are used to ensure the proper functioning of forms and sessions. SSL encryption is used to secure data transmission.",
+
+          privacyRightsTitle: "9. Your rights",
+          privacyRightsText:
+            "You have the right:<br />• To obtain information about your data,<br />• To request correction or deletion,<br />• To restrict processing,<br />• To withdraw your consent at any time,<br />• To lodge a complaint with the Austrian Data Protection Authority.",
+
+          privacyChangesTitle: "10. Changes to the privacy policy",
+          privacyChangesText:
+            "The association reserves the right to change the privacy policy. The current version is always published on the website.",
+          about_page_title: "Privacy Policy | Hilfehub",
+
+          // Footer
+          privacy: "Privacy Policy",
+          imprint: "Imprint",
+          contact: "Contact",
+          contactTitle: "Contact",
+          makeAwish: "Währinger Straße 169-171 4/3 1180 Vienna",
+          officeHours: "Office Hours",
+          officeHoursText: "Tuesday – Friday<br />10:00 am – 2:00 pm",
+          phoneTitle: "Phone",
+          donateNow: "DONATE NOW >",
+          becomeMember: "SUBSCRIBE TO THE NEWSLETTER >",
+          rights: "© 2025 Hilfehub.",
+        },
+      };
+
+      // Функция перевода страницы
+      function translatePage(lang) {
+        // Обновляем текст элементов с атрибутом data-i18n
+        document
+          .querySelectorAll("[data-i18n], [data-i18n-html]")
+          .forEach((element) => {
+            const key =
+              element.getAttribute("data-i18n") ||
+              element.getAttribute("data-i18n-html");
+
+            if (translations[lang][key]) {
+              if (
+                element.tagName === "INPUT" ||
+                element.tagName === "TEXTAREA"
+              ) {
+                element.placeholder = translations[lang][key];
+              } else if (element.hasAttribute("data-i18n-html")) {
+                element.innerHTML = translations[lang][key];
+              } else {
+                element.textContent = translations[lang][key];
+              }
+            }
+          });
+
+        // Обновляем кнопку языка
+        const langButton = document.getElementById("language-toggle");
+        if (langButton) {
+          langButton.querySelector("span").textContent = lang.toUpperCase();
+        }
+
+        // Сохраняем текущий язык в переменной (не используем localStorage)
+        window.currentLanguage = lang;
+      }
+
+      // Инициализация перевода при загрузке
+      document.addEventListener("DOMContentLoaded", function () {
+        const defaultLang = "de";
+        window.currentLanguage = defaultLang;
+        translatePage(defaultLang);
+
+        // Обработчик для кнопки языка
+        const langButton = document.getElementById("language-toggle");
+        if (langButton) {
+          langButton.addEventListener("click", function () {
+            const currentLang = window.currentLanguage || "de";
+            const newLang = currentLang === "de" ? "en" : "de";
+            translatePage(newLang);
+          });
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. Анимация падающих капель воды
+        function createWaterDrops() {
+          const hero = document.querySelector(".hero");
+          if (!hero) return;
+
+          const dropsCount = 15;
+
+          for (let i = 0; i < dropsCount; i++) {
+            const drop = document.createElement("div");
+            drop.classList.add("water-drop");
+            drop.style.left = `${Math.random() * 100}%`;
+            drop.style.animationDelay = `${Math.random() * 5}s`;
+            hero.appendChild(drop);
+          }
+        }
+
+        // 2. Анимация при скролле
+        function setupScrollAnimations() {
+          const animatedElements = document.querySelectorAll(
+            ".stat-card, .impact-img, h2, h3, p, .btn"
+          );
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  if (
+                    entry.target.classList.contains("stat-card") ||
+                    entry.target.classList.contains("impact-img")
+                  ) {
+                    entry.target.classList.add("visible");
+                  } else {
+                    entry.target.classList.add("animate-fadeIn");
+                  }
+                }
+              });
+            },
+            {
+              threshold: 0.1,
+            }
+          );
+
+          animatedElements.forEach((el) => {
+            observer.observe(el);
+          });
+        }
+
+        // 3. Эффект ряби для кнопок
+        function setupRippleEffect() {
+          const buttons = document.querySelectorAll(".ripple");
+
+          buttons.forEach((button) => {
+            button.addEventListener("click", function (e) {
+              const ripple = document.createElement("span");
+              ripple.classList.add("ripple-effect");
+
+              const rect = button.getBoundingClientRect();
+              const size = Math.max(rect.width, rect.height);
+              const x = e.clientX - rect.left - size / 2;
+              const y = e.clientY - rect.top - size / 2;
+
+              ripple.style.width = ripple.style.height = `${size}px`;
+              ripple.style.left = `${x}px`;
+              ripple.style.top = `${y}px`;
+
+              button.appendChild(ripple);
+
+              setTimeout(() => {
+                ripple.remove();
+              }, 600);
+            });
+          });
+        }
+
+        // 4. Анимация навигации при скролле
+        function setupNavbarAnimation() {
+          const navbar = document.querySelector(".navbar");
+          if (!navbar) return;
+
+          window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+              navbar.classList.add("scrolled");
+            } else {
+              navbar.classList.remove("scrolled");
+            }
+          });
+        }
+
+        // 5. Парящая анимация для важных элементов
+        function setupFloatingElements() {
+          const floatingElements = document.querySelectorAll(".btn-primary");
+          floatingElements.forEach((el) => {
+            el.classList.add("animate-float");
+            el.style.animationDelay = `${Math.random() * 2}s`;
+          });
+        }
+
+        // 6. Анимация при наведении на карточки
+        function setupHoverAnimations() {
+          const cards = document.querySelectorAll(".stat-card");
+          cards.forEach((card) => {
+            card.classList.add("hover-scale");
+          });
+        }
+
+        // 7. Параллакс эффект для героя
+        function setupParallax() {
+          const hero = document.querySelector(".hero");
+          if (!hero) return;
+
+          hero.classList.add("parallax");
+        }
+
+        // 8. Выбор суммы пожертвования
+        function setupDonationOptions() {
+          const donationOptions = document.querySelectorAll(".donation-option");
+          const donateBtn = document.querySelector(".btn-donate");
+
+          donationOptions.forEach((option) => {
+            option.addEventListener("click", function () {
+              // Убираем выделение у всех
+              donationOptions.forEach((opt) =>
+                opt.classList.remove("selected")
+              );
+
+              // Выделяем текущий
+              this.classList.add("selected");
+
+              // Активируем кнопку "Пожертвовать"
+              if (donateBtn) {
+                donateBtn.disabled = false;
+                donateBtn.classList.remove("opacity-70", "cursor-not-allowed");
+                donateBtn.classList.add("cursor-pointer");
+              }
+            });
+          });
+        }
+
+        // 9. Переключатель периодичности
+        function setupFrequencySelector() {
+          const frequencyBtns = document.querySelectorAll(".frequency-btn");
+
+          frequencyBtns.forEach((btn) => {
+            btn.addEventListener("click", function () {
+              frequencyBtns.forEach((b) => b.classList.remove("selected"));
+              this.classList.add("selected");
+            });
+          });
+        }
+
+        // 10. Управление мобильным меню
+        function setupMobileMenu() {
+          const mobileBtn = document.getElementById("mobile-menu-button");
+          const mobileMenu = document.getElementById("mobile-menu");
+          const iconOpen = document.getElementById("mobile-menu-icon-open");
+          const iconClose = document.getElementById("mobile-menu-icon-close");
+          const partnerBtn = document.getElementById("mobile-partner-btn");
+          const partnerMenu = document.getElementById("mobile-partner-menu");
+          const partnerIcon = document.getElementById("partner-icon");
+          const mehrBtn = document.getElementById("mobile-mehr-btn");
+          const mehrMenu = document.getElementById("mobile-mehr-menu");
+          const mehrIcon = document.getElementById("mehr-icon");
+
+          // Переключение основного меню
+          if (mobileBtn) {
+            mobileBtn.addEventListener("click", () => {
+              mobileMenu.classList.toggle("hidden");
+              mobileMenu.classList.toggle("active");
+              iconOpen.classList.toggle("hidden");
+              iconClose.classList.toggle("hidden");
+            });
+          }
+
+          // Переключение подменю Partner
+          if (partnerBtn) {
+            partnerBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              partnerMenu.classList.toggle("active");
+              partnerIcon.classList.toggle("rotate-180");
+            });
+          }
+
+          // Переключение подменю Mehr
+          if (mehrBtn) {
+            mehrBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              mehrMenu.classList.toggle("active");
+              mehrIcon.classList.toggle("rotate-180");
+            });
+          }
+
+          // Закрытие меню при клике снаружи
+          document.addEventListener("click", (e) => {
+            if (
+              !mobileMenu.contains(e.target) &&
+              !mobileBtn.contains(e.target)
+            ) {
+              mobileMenu.classList.add("hidden");
+              mobileMenu.classList.remove("active");
+              iconOpen.classList.remove("hidden");
+              iconClose.classList.add("hidden");
+
+              // Также закрываем подменю
+              partnerMenu.classList.remove("active");
+              mehrMenu.classList.remove("active");
+              partnerIcon.classList.remove("rotate-180");
+              mehrIcon.classList.remove("rotate-180");
+            }
+          });
+        }
+
+        // Инициализация всех анимаций
+        function initAnimations() {
+          createWaterDrops();
+          setupScrollAnimations();
+          setupRippleEffect();
+          setupNavbarAnimation();
+          setupFloatingElements();
+          setupHoverAnimations();
+          setupParallax();
+          setupDonationOptions();
+          setupFrequencySelector();
+          setupMobileMenu();
+
+          // Добавление задержек для анимации
+          document.querySelectorAll("h2").forEach((el, i) => {
+            el.classList.add(`animate-delay-${(i + 1) * 100}`);
+          });
+        }
+
+        // Запуск при полной загрузке страницы
+        window.addEventListener("load", initAnimations);
+      });
+    </script>
+  </body>
+</html>
